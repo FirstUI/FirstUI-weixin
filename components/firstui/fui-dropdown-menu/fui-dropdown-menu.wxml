@@ -1,0 +1,35 @@
+<view class="fui-dropdown__menu">
+  <slot></slot>
+  <view class="fui-dropdown__menu-list {{direction!=='up'?'fui-ddm__down':''}} {{direction==='up'?'fui-ddm__up':''}} {{isShow && direction!=='up'?'fui-ddm__down-show':''}} {{isShow && direction==='up'?'fui-ddm__up-show':''}}" style="{{parse.getStyles(radius, background, right)}}">
+    <scroll-view class="fui-ddm__scroll" scroll-y style="max-height:{{maxHeight}}rpx;min-width:{{minWidth}}rpx">
+      <view class="fui-dropdown__menu-item {{isReverse?'fui-ddm__reverse':''}} {{splitLine && itemList.length-1!==index?'fui-ddm__item-line':''}}" style="background:{{background}};padding:{{padding}}" wx:for="{{itemList}}" wx:for-item="model" wx:key="index" catchtap="itemClick" data-index="{{index}}">
+        <view class="fui-ddm__checkbox {{isCheckMark?'fui-is__checkmark':''}} {{(!checkboxColor || checkboxColor===true) && model.checked && !isCheckMark?'fui-ddm__checkbox-color':''}}" style="background:{{model.checked && !isCheckMark ?checkboxColor:'transparent'}};border-color:{{model.checked && !isCheckMark ?checkboxColor:borderColor}}" wx:if="{{isCheckbox}}">
+          <view class="fui-ddm__checkmark" style="border-bottom-color:{{checkmarkColor}};border-right-color:{{checkmarkColor}}" wx:if="{{model.checked}}"></view>
+        </view>
+        <view class="fui-ddm__flex">
+          <view class="fui-ddm__icon-box {{!isReverse && isCheckbox?'fui-ddm__icon-ml':''}} {{isReverse?'fui-ddm__icon-mr':''}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx" wx:if="{{model.src}}">
+            <image src="{{model.src}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx"></image>
+          </view>
+          <text class="fui-ddm__item-text {{!isReverse && (isCheckbox || model.src)?'fui-ddm__text-pl':''}} {{isReverse && (isCheckbox || model.src)?'fui-ddm__text-pr':''}}" style="font-size:{{size}}rpx;color:{{selectedColor && model.checked?selectedColor:color}}">{{model.text}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="fui-ddm__mask" style="background:{{maskBackground}}" wx:if="{{isShow && isMask}}" bindtap="close">
+  </view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getStyles: function (radius, background, right) {
+      var styles = "border-radius:" + radius + "rpx;background:" + background + ";"
+      var rightValue = parseInt(right || 0)
+      if (rightValue >= 0) {
+        styles += 'right:0;'
+      } else {
+        styles += 'left:0;'
+      }
+      return styles
+    }
+  }
+</wxs>

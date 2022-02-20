@@ -1,0 +1,18 @@
+<view catchtouchmove="stop">
+  <view class="fui-actionsheet__mask {{show?'fui-actionsheet__mask-show':''}}" bindtap="handleClickMask" style="{{parse.getStyle(zIndex)}}"></view>
+  <view class="fui-actionsheet__wrap {{show?'fui-actionsheet__show':''}} {{radius?'fui-actionsheet__radius':''}} {{theme==='light'?'fui-as__bg-light':''}} {{theme==='dark'?'fui-as__bg-dark':''}}" style="z-index:{{zIndex}}">
+    <text class="fui-actionsheet__tips {{radius?'fui-actionsheet__radius':''}} {{theme==='light'?'fui-as__btn-light':''}} {{theme==='dark'?'fui-as__btn-dark':''}}" style="font-size:{{size}}rpx;color:{{color}}" wx:if="{{tips}}">{{tips}}</text>
+    <view class="{{isCancel?'fui-actionsheet__operate-box':''}}">
+      <text class="fui-actionsheet__btn {{!isCancel && index==vals.length-1?'fui-actionsheet__btn-last':''}} {{radius && !tips && index===0?'fui-actionsheet__radius':''}} {{(index!==0 || tips) && theme==='light'?'fui-as__divider-light':''}} {{(index!==0 || tips) && theme==='dark'?'fui-as__divider-dark':''}} {{theme==='light'?'fui-as__btn-light':''}} {{theme==='dark'?'fui-as__btn-dark':''}}" style="color:{{theme==='dark'?(item.darkColor || '#D1D1D1'):(item.color || '#181818')}};font-size:{{itemSize}}rpx" wx:for="{{vals}}" wx:key="index" bindtap="handleClickItem" data-index="{{index}}">{{item.text}}</text>
+    </view>
+    <text style="color:{{theme==='dark'?'#D1D1D1':'#181818'}};font-size:{{itemSize}}rpx" class="fui-actionsheet__btn fui-actionsheet__cancel {{theme==='light'?'fui-as__btn-light':''}} {{theme==='dark'?'fui-as__btn-dark':''}}" wx:if="{{isCancel}}" bindtap="handleClickCancel">取消</text>
+  </view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getStyle: function (zIndex) {
+      return "z-index:" + (parseInt(zIndex) - 10)
+    }
+  }
+</wxs>

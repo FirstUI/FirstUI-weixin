@@ -1,0 +1,6 @@
+<view class="fui-loadmore__wrap {{'fui-loadmore__'+direction}}" style="height:{{height}}rpx">
+  <view class="fui-loadmore__icon {{!activeColor?'fui-loadmore__border-left':''}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx;border-left-color:{{activeColor}};border-right-color:{{iconColor}};border-top-color:{{iconColor}};border-bottom-color:{{iconColor}}" wx:if="{{!src}}">
+  </view>
+  <image class="fui-loadmore__icon-ani" src="{{src}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx" wx:if="{{src}}"></image>
+  <text class="{{direction==='col'?'fui-loadmore__text':''}}" style="color:{{color}};font-size:{{size}}rpx;line-height:{{size}}rpx">{{text}}</text>
+</view>

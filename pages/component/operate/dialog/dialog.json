@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "对话框",
+  "usingComponents": {
+    "fui-dialog": "/components/firstui/fui-dialog/fui-dialog"
+  }
+}

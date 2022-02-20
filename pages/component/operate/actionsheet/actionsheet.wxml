@@ -1,0 +1,16 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">ActionSheet</view>
+    <view class="fui-page__desc">ActionSheet 上拉菜单，从底部弹出的模态框，提供和当前场景相关的操作菜单。</view>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <fui-button type="gray" width="400rpx" height="84rpx" text="带提示" bold margin="24rpx 0" bindclick="showActionSheet" data-type="1"></fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="无提示操作" bold bindclick="showActionSheet" data-type="2">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="暗黑模式" margin="24rpx 0" bold bindclick="showActionSheet" data-type="3">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="无取消按钮" bold bindclick="showActionSheet" data-type="4">
+    </fui-button>
+  </view>
+  <fui-actionsheet show="{{show}}" tips="{{tips}}" itemList="{{itemList}}" isCancel="{{isCancel}}" theme="{{theme}}" bindclick="itemClick" bindcancel="cancel"></fui-actionsheet>
+</view>

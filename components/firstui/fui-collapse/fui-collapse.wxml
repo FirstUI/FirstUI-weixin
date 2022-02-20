@@ -1,0 +1,3 @@
+<view class="fui-collapse__wrap">
+  <slot></slot>
+</view>

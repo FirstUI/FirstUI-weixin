@@ -1,0 +1,12 @@
+<view class="fui-footer {{isFixed?'fui-footer__fixed-bottom':''}}" style="background:{{background}}">
+  <view class="fui-footer__link" wx:if="{{navigate.length>0}}">
+    <navigator wx:for="{{navigate}}" wx:key="index" class="fui-link__item {{item.color?'':'fui-link__color'}}"
+      hover-class="fui-link-hover" hover-stop-propagation open-type="{{item.openType || 'navigate'}}" url="{{item.url}}"
+      delta="{{item.delta}}"><text class="fui-link__text {{index===navigate.length-1?'fui-link__text-border':''}}"
+        style="color:{{item.color || '#465CFF'}};font-size:{{(item.size || 28)+'rpx'}};border-color:{{borderColor}};line-height:{{item.size || 28}}rpx">{{item.text}}</text>
+    </navigator>
+  </view>
+  <view class="fui-footer__text">
+    <text style="color:{{color}};font-size:{{size}}rpx">{{text}}</text>
+  </view>
+</view>

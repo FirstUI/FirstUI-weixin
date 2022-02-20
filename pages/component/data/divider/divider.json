@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分割线",
+  "usingComponents": {
+    "fui-divider": "/components/firstui/fui-divider/fui-divider"
+  }
+}

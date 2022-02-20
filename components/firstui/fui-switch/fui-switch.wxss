@@ -1,0 +1,103 @@
+.fui-switch__input {
+  display: inline-block;
+}
+.fui-checkbox__self {
+  font-size: 0;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  display: inline-flex;
+  box-sizing: border-box;
+  vertical-align: top;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.fui-switch__input-def {
+  position: relative;
+  width: 52px;
+  height: 32px;
+  border: 1px solid #CCCCCC;
+  outline: 0;
+  border-radius: 16px;
+  box-sizing: border-box;
+  transition: background-color .1s, border .1s;
+}
+
+.fui-switch__input-def::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #fdfdfd;
+  transition: transform .3s
+}
+
+.fui-switch__input-def::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+  transition: transform .3s
+}
+
+.fui-switch__input--checked::before {
+  transform: scale(0)
+}
+
+.fui-switch__input--checked::after {
+  transform: translateX(20px)
+}
+
+.fui-switch__color {
+  background: var(--fui-color-primary, #465CFF) !important;
+  border-color: var(--fui-color-primary, #465CFF) !important;
+}
+
+
+.wx-switch-input {
+  margin-right: 0 !important;
+}
+
+.fui-check__mark {
+  width: 20rpx;
+  height: 40rpx;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #FFFFFF;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #FFFFFF;
+  transform: rotate(45deg) scale(0.5);
+  transform-origin: 54% 48%;
+  box-sizing: border-box;
+}
+
+.fui-switch__hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.fui-checkbox__disabled {
+  opacity: 0.6;
+}

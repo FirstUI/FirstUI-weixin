@@ -1,0 +1,3 @@
+<view class="{{hidden?'fui-form__field':''}}">
+		<slot></slot>
+	</view>

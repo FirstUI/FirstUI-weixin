@@ -1,0 +1,3 @@
+<view class="fui-backdrop__wrap {{background?'':'fui-backdrop__bg'}} {{show?'fui-backdrop__show':''}}" style="background:{{background}};position:{{absolute?'absolute':'fixed'}};z-index:{{zIndex}}" bindtap="handleClick">
+  <slot></slot>
+</view>

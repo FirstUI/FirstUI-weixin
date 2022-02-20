@@ -1,0 +1,136 @@
+.fui-input__wrap {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  position: relative;
+}
+
+.fui-input__border-top {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  z-index: 1;
+}
+
+.fui-input__border-bottom {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 100%;
+  z-index: 1;
+}
+
+
+.fui-input__required {
+  position: absolute;
+  left: 12rpx;
+  height: 30rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1.15;
+}
+
+
+.fui-input__label {
+  padding-right: 12rpx;
+  flex-shrink: 0;
+}
+
+.fui-input__self {
+  flex: 1;
+  padding-right: 12rpx;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: transparent;
+}
+
+.fui-input__clear-wrap {
+  width: 32rpx;
+  height: 32rpx;
+  transform: rotate(45deg) scale(1.1);
+  position: relative;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.fui-input__clear {
+  width: 32rpx;
+  height: 32rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: scale(0.5) translateZ(0);
+}
+
+.fui-input__clear-a {
+  width: 32rpx;
+  border: 2rpx solid #fff;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.fui-input__clear-b {
+  height: 32rpx;
+  border: 2rpx solid #fff;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.fui-input__placeholder {
+  color: var(--fui-color-minor, #ccc);
+  overflow: visible;
+}
+
+
+.fui-input__placeholder {
+  color: var(--fui-color-minor, #ccc);
+  overflow: visible;
+}
+
+
+.fui-input__border {
+  border-radius: 8rpx;
+  position: relative;
+  border-width: 0;
+}
+
+.fui-input__border-radius{
+  border-radius: 8rpx;
+}
+
+.fui-input__border::after {
+  content: ' ';
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  border: 1px solid var(--fui-color-border, #EEEEEE);
+  transform-origin: 0 0;
+  transform: scale(0.5);
+  left: 0;
+  top: 0;
+  border-radius: 16rpx;
+  pointer-events: none;
+}
+
+.fui-radius__fillet::after {
+  border-radius: 200px !important;
+}
+.fui-radius__fillet {
+  border-radius: 100px !important;
+}
+
+.fui-input__text-right {
+  text-align: right;
+}

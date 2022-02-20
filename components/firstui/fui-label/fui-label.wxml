@@ -1,0 +1,3 @@
+<view class="fui-label__box {{full?'fui-label__full':''}}" style="padding:{{padding}};margin:{{margin}}" catchtap="onClick">
+  <slot></slot>
+</view>

@@ -1,0 +1,19 @@
+<view class="{{textareaBorder?'fui-textarea__border':''}}" style="margin-top:{{marginTop}}rpx;border-color:{{borderColor}}" bindtap="fieldClick">
+  <view class="fui-textarea__wrap {{flexStart?'fui-textarea__flex-start':''}}" style="padding:{{padding}};background-color:{{backgroundColor}}">
+    <view wx:if="{{borderTop && !textareaBorder}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx" class="fui-textarea__border-top">
+    </view>
+    <view class="fui-textarea__required {{flexStart?'fui-required__flex-start':''}}" style="color:{{requiredColor}};top:{{flexStart?requiredTop:'50%'}}" wx:if="{{required}}">*</view>
+    <view class="fui-textarea__label" style="min-width:{{labelWidth}}rpx" wx:if="{{label}}">
+      <text style="font-size:{{labelSize}}rpx;color:{{labelColor}}">{{label}}</text>
+    </view>
+    <slot name="left"></slot>
+    <view class="fui-textarea__flex-1">
+      <textarea class="fui-textarea__self {{textRight?'fui-text__right':''}}" style="height:{{height}};min-height:{{minHeight}};font-size:{{size}}rpx;color:{{color}}" placeholder-class="fui-textarea-placeholder" name="{{name}}" value="{{val}}" placeholder="{{placeholder}}" placeholderStyle="{{placeholderStyl}}" disabled="{{disabled}}" cursor-spacing="{{cursorSpacing}}" maxlength="{{maxlength}}" focus="{{focused}}" auto-height="{{autoHeight}}" fixed="{{fixed}}" show-confirm-bar="{{showConfirmBar}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" disable-default-padding="{{disableDefaultPadding}}" enableNative="{{false}}" show-count="{{false}}" bindfocus="onFocus" bindblur="onBlur" bindinput="onInput" bindconfirm="onConfirm" bindlinechange="onLinechange" bindkeyboardheightchange="onKeyboardheightchange"></textarea>
+      <view class="fui-textarea__counter" wx:if="{{isCounter && maxlength!=-1}}">
+        <text style="font-size:{{counterSize}}rpx;color:{{counterColor}}">{{count}}/{{maxlength}}</text>
+      </view>
+    </view>
+    <slot></slot>
+    <view wx:if="{{borderBottom  && !textareaBorder}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx" class="fui-textarea__border-bottom"></view>
+  </view>
+</view>

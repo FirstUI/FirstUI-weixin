@@ -1,0 +1,16 @@
+<wxs src="./index.wxs" module="handler"></wxs>
+<view class="fui-swipe__action-wrap">
+  <view class="fui-swipe__action-inner" show="{{isShow}}" change:show="{{handler.showChange}}" threshold="{{thresholdVal}}" change:threshold="{{handler.thresholdChange}}" disabled="{{isDisabled}}" change:disabled="{{handler.disabledChange}}" bindtouchstart="{{handler.touchstart}}" bindtouchmove="{{handler.touchmove}}" bindtouchend="{{handler.touchend}}">
+    <view class="fui-swipe__action-left">
+      <slot></slot>
+    </view>
+    <view class="fui-swipe__action-right" wx:if="{{!custom}}">
+      <view class="fui-swipe__action-btn" style="background:{{item.background}}" wx:for="{{buttons}}" wx:key="index" bindtouchstart="appTouchStart" bindtouchend="appTouchEnd" data-index="{{index}}" data-item="{{item}}">
+        <text class="fui-swipe__action-text" style="font-size:{{(item.size || size)}}rpx;color:{{item.color || color}}">{{item.text}}</text>
+      </view>
+    </view>
+    <view class="fui-swipe__action-right" wx:else>
+      <slot name="buttons"></slot>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="fui-collapse__item">
+  <view bindtap="onClick" class="fui-collapse-item__title {{disabled?'fui-collapse__disabled':''}}" style="background:{{background}}">
+    <view class="fui-collapse__title">
+      <slot></slot>
+    </view>
+    <view wx:if="{{arrow}}" class="fui-collapse__arrow {{isOpen?'fui-collapse__arrow-active':''}} {{animation?'fui-collapse__item-ani':''}}" style="margin-right:{{arrowRight}}rpx">
+      <view class="fui-collapse__arrow-inner" style="border-color:{{arrowColor}}"></view>
+    </view>
+    <view wx:if="{{isBorder}}" style="background:{{borderColor}};left:{{borderLeft}}rpx" class="fui-collapse__border {{!borderColor?'fui-collapse__border-color':''}}"></view>
+  </view>
+  <view class="fui-collapse__content-wrap {{animation?'fui-collapse-__content-ani':''}}" style="height:{{isOpen?height:0}}px;background:{{contentBg}}">
+    <view id="{{elId}}" class="fui-collapse__content {{isHeight?'fui-collapse__content-open':''}}">
+      <slot name="content"></slot>
+    </view>
+  </view>
+</view>

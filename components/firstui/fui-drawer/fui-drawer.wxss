@@ -1,0 +1,40 @@
+.fui-drawer__popup-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in-out .3s;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.fui-drawer__wrap-show {
+  opacity: 1;
+  visibility: visible;
+}
+.fui-drawer__popup {
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  min-width: 40rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fui-drawer_left {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.fui-drawer_right {
+  transform: translate3d(100%, 0, 0);
+}
+
+.fui-drawer__show {
+  transform: translate3d(0, 0, 0);
+}

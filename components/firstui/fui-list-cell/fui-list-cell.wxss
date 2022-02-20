@@ -1,0 +1,53 @@
+.fui-list__cell {
+  position: relative;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fui-cell__arrow {
+  height: 40rpx;
+  width: 40rpx;
+  border-width: 3px 3px 0 0;
+  border-style: solid;
+  transform: rotate(45deg) scale(0.5);
+  border-radius: 4rpx;
+  flex-shrink: 0;
+  margin-left: auto;
+  box-sizing: border-box;
+  transform-origin: center center;
+  margin-right: -5.8579rpx;
+}
+
+.fui-cell__border-top {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  z-index: 1;
+}
+
+.fui-cell__border-bottom {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 100%;
+  z-index: 1;
+}
+
+.fui-cell__border-color {
+  background-color: var(--fui-color-border, #EEEEEE) !important;
+}
+.fui-list__cell-background {
+  background-color: var(--fui-bg-color, #fff) !important;
+}
+.fui-highlight:active {
+  background-color: var(--fui-bg-color-hover, rgba(0, 0, 0, 0.2)) !important;
+}

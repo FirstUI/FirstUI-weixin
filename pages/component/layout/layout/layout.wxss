@@ -1,0 +1,16 @@
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-col__item {
+  height: 84rpx;
+  border-radius: 16rpx;
+}
+
+.fui-color__black {
+  background-color: #333333;
+}
+
+.fui-color__yellow {
+  background-color: #FFB703;
+}

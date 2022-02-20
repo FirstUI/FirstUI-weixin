@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "遮罩层",
+  "usingComponents": {
+    "fui-backdrop": "/components/firstui/fui-backdrop/fui-backdrop"
+  }
+}

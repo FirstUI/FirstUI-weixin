@@ -1,0 +1,12 @@
+<view bindtap="maskClose" style="background:{{maskBackground}}" class="fui-dialog__wrap {{show?'fui-wrap__show':''}}" catchtouchmove="stop">
+  <view class="fui-dialog__inner" style="background:{{background}};border-radius:{{radius}}rpx">
+    <text class="fui-dialog__title" style="color:{{color}}" wx:if="{{title}}">{{title}}</text>
+    <view class="fui-dialog__body {{title?'':'fui-dialog__mtop'}}">
+      <text class="fui-dialog__descr" style="color:{{contentColor}}" wx:if="{{content}}">{{content}}</text>
+      <slot></slot>
+    </view>
+    <view class="fui-dialog__footer">
+      <text wx:for="{{buttons}}" wx:key="index" style="color:{{item.color || '#333333'}}" class="fui-dialog__btn {{index===0?'fui-dialog__btn-first':''}}" bindtap="handleClick" data-index="{{index}}">{{item.text}}</text>
+    </view>
+  </view>
+</view>

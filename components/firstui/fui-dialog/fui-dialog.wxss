@@ -1,0 +1,108 @@
+.fui-dialog__wrap {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition-property: all;
+  transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  display: flex;
+  transform: scale3d(1, 1, 0);
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.fui-dialog__inner {
+  width: 680rpx;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  max-height: 90%;
+  flex-direction: column;
+}
+
+.fui-dialog__title {
+  padding: 64rpx 48rpx 0;
+  font-weight: 700;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.fui-dialog__body {
+  padding: 32rpx 48rpx;
+  margin-bottom: 32rpx;
+  word-break: break-all;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.fui-dialog__descr {
+  font-size: 30rpx;
+  font-weight: normal;
+  text-align: center;
+}
+
+.fui-dialog__mtop {
+  margin-top: 32rpx;
+}
+
+.fui-dialog__footer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  line-height: 112rpx;
+  height: 112rpx;
+}
+.fui-dialog__footer:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid var(--fui-color-border, #EEEEEE);
+  transform-origin: 0 0;
+  transform: scaleY(.5)
+}
+
+.fui-dialog__btn {
+  display: block;
+  text-decoration: none;
+  flex: 1;
+  height: 112rpx;
+  line-height: 112rpx;
+  font-weight: 700;
+  position: relative;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.fui-dialog__btn:active {
+  background-color: var(--fui-bg-color-hover, rgba(0, 0, 0, 0.2));
+}
+
+.fui-dialog__btn::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-left: 1px solid var(--fui-color-border, #EEEEEE);
+  transform-origin: 0 0;
+  transform: scaleX(.5)
+}
+
+.fui-dialog__btn-first::after {
+  width: 0;
+  border-left: 0 !important;
+}
+.fui-wrap__show {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  visibility: visible;
+}

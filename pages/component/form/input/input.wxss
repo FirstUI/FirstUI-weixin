@@ -1,0 +1,11 @@
+page {
+  font-weight: normal;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-left__icon {
+  padding-right: 24rpx;
+}

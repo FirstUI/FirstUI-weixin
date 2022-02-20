@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "抽屉",
+  "usingComponents": {
+    "fui-drawer": "/components/firstui/fui-drawer/fui-drawer"
+  }
+}

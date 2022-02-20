@@ -1,0 +1,30 @@
+<view class="fui-alert__wrap {{background?'':'fui-alert__'+type}}" style="background:{{background || parse.getColor(type)}};border-radius:{{radius}};padding:{{padding}};margin-top:{{marginTop}}rpx;margin-bottom:{{marginBottom}}rpx">
+  <view class="fui-alert__shrink" catchtap="leftClick">
+    <slot></slot>
+    <icon type="{{type}}" size="{{iconSize}}" color="{{iconColor}}" wx:if="{{!isLeft && type && type!==true}}"></icon>
+  </view>
+  <view class="fui-alert__content {{(!isLeft && type && type!=='true') || (spacing && isLeft)?'fui-text__p-left':''}} {{closable?'fui-text__p-right':''}}" catchtap="onClick">
+    <text class="fui-alert__text" style="font-size:{{size}};color:{{color}}" wx:if="{{title}}">{{title}}</text>
+    <text class="fui-alert__text fui-desc__padding {{single?'fui-alert__single':''}}" style="font-size:{{descSize}};color:{{descColor}}" wx:if="{{desc}}">{{desc}}</text>
+    <slot name="content"></slot>
+  </view>
+  <view class="fui-alert__shrink">
+    <slot name="right"></slot>
+  </view>
+  <icon catchtap="close" type="cancel" size="{{closeSize}}" color="{{closeColor}}" wx:if="{{closable}}" class=" {{desc?'fui-alert__icon-close':''}}">
+  </icon>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getColor: function (type) {
+      var color = "#465CFF"
+      var colors = {
+        'success': '#09BE4F',
+        'warn': '#FFB703',
+        'clear': '#FF2B2B'
+      }
+      return colors[type] ? colors[type] : color;
+    }
+  }
+</wxs>

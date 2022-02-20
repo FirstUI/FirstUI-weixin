@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "上拉菜单",
+  "usingComponents": {
+    "fui-actionsheet": "/components/firstui/fui-actionsheet/fui-actionsheet"
+  }
+}

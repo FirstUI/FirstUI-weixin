@@ -1,0 +1,10 @@
+<view class="fui-list__cell {{highlight?'fui-highlight':''}} {{background?'':'fui-list__cell-background'}}"
+  style="padding:{{padding}};background:{{background}};margin-top:{{marginTop}}rpx;margin-bottom:{{marginBottom}}rpx;border-radius:{{radius}}"
+  bindtap="handleClick">
+  <view wx:if="{{topBorder}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx"
+    class="fui-cell__border-top {{borderColor?'':'fui-cell__border-color'}}"></view>
+  <slot></slot>
+  <view wx:if="{{bottomBorder}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx"
+    class="fui-cell__border-bottom {{borderColor?'':'fui-cell__border-color'}}"></view>
+  <view class="fui-cell__arrow" wx:if="{{arrow}}" style="border-color:{{arrowColor}}"></view>
+</view>

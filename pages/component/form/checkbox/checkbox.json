@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "复选框",
+  "usingComponents": {
+    "fui-checkbox-group":"/components/firstui/fui-checkbox-group/fui-checkbox-group",
+    "fui-checkbox":"/components/firstui/fui-checkbox/fui-checkbox",
+    "fui-label":"/components/firstui/fui-label/fui-label"
+  }
+}

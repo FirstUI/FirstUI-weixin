@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "标签页",
+  "usingComponents": {
+    "fui-tabs": "/components/firstui/fui-tabs/fui-tabs"
+  }
+}

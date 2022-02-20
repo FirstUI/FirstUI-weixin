@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "宫格",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-grid": "/components/firstui/fui-grid/fui-grid",
+    "fui-grid-item": "/components/firstui/fui-grid-item/fui-grid-item"
+  }
+}

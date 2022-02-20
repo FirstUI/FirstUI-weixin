@@ -1,0 +1,10 @@
+.fui-color__item {
+  width: 100%;
+  justify-content: space-between;
+  height: 84rpx;
+  border-radius: 42px;
+  margin-bottom: 24rpx;
+  font-size: 28rpx;
+  font-weight: 400;
+  box-shadow: 0 4rpx 8rpx 0 rgba(2, 4, 38, 0.05);
+}

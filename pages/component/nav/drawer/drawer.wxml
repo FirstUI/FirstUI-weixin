@@ -1,0 +1,37 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Drawer</view>
+    <view class="fui-page__desc">Drawer 抽屉，抽屉式导航，用于展示侧滑菜单，侧滑导航。</view>
+  </view>
+  <view class="fui-page__bd">
+    <fui-button type="gray" width="400rpx" height="84rpx" text="从右往左开" bold margin="24rpx 0" bindclick="showDrawer" data-type="1"></fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="从左往右开" bold bindclick="showDrawer" data-type="2">
+    </fui-button>
+  </view>
+  <fui-drawer show="{{show}}" bindclose="closeDrawer" data-type="1">
+    <scroll-view scroll-y class="fui-scroll__view">
+      <view>
+        <fui-list-cell arrow wx:for="{{itemList}}" wx:key="index">
+          item{{index+1}}
+        </fui-list-cell>
+      </view>
+    </scroll-view>
+  </fui-drawer>
+
+  <fui-drawer show="{{show2}}" direction="left" maskClosable="{{false}}">
+    <view class="fui-scroll__view">
+      <view class="fui-title">左侧菜单栏</view>
+      <scroll-view scroll-y style="height: 720rpx;">
+        <view>
+          <fui-list-cell wx:for="{{itemList}}" wx:key="index">
+            item{{index+1}}
+          </fui-list-cell>
+        </view>
+      </scroll-view>
+      <view class="fui-btn__box">
+        <fui-button type="warning" width="400rpx" height="84rpx" text="关闭菜单栏" bold bindclick="closeDrawer" data-type="2">
+        </fui-button>
+      </view>
+    </view>
+  </fui-drawer>
+</view>

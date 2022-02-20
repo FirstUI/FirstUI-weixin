@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "缺省页",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-empty":"/components/firstui/fui-empty/fui-empty"
+  }
+}

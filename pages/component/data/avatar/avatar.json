@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "头像",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-avatar": "/components/firstui/fui-avatar/fui-avatar"
+  }
+}

@@ -1,0 +1,28 @@
+<view class="fui-pagination__wrap">
+  <view class="fui-pagination__btn {{currentIndex === 1?'fui-pagination__disabled':''}} {{currentIndex !== 1 && highlight?'fui-pagination__btn-ac':''}} {{color?'':'fui-pagination__color'}}" style="width:{{width}}rpx;height:{{height}}rpx;border-color:{{borderColor}};background:{{background}};border-radius:{{radius==-1?height:radius}}rpx" bindtap="clickPrev">
+    <text class="{{color?'':'fui-pagination__color'}}" style="color:{{color}};font-size:{{size}}rpx" wx:if="{{!custom}}">{{prevText}}</text>
+    <slot name="prev"></slot>
+  </view>
+  <view class="fui-pagination__num" wx:if="{{isPage}}">
+    <text class="{{currentColor?'':'fui-pagination__active-color'}}" style="color:{{currentColor}};font-size:{{pageFontSize}}rpx">{{currentIndex}}</text>
+    <text class="{{pageColor?'':'fui-pagination__color'}}" style="color:{{pageColor}};font-size:{{pageFontSize}}rpx">/{{parse.maxPage(total, pageSize)}}</text>
+  </view>
+  <view class="fui-pagination__btn {{currentIndex === parse.maxPage(total, pageSize)?'fui-pagination__disabled':''}} {{currentIndex !== parse.maxPage(total, pageSize) && highlight?'fui-pagination__btn-ac':''}} {{color?'':'fui-pagination__color'}}" style="width:{{width}}rpx;height:{{height}}rpx;border-color:{{borderColor}};background:{{background}};border-radius:{{radius==-1?height:radius}}rpx" bindtap="clickNext">
+    <text class="{{color?'':'fui-pagination__color'}}" style="color:{{color}};font-size:{{size}}rpx" wx:if="{{!custom}}">{{nextText}}</text>
+    <slot name="next"></slot>
+  </view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    maxPage: function (total, pageSize) {
+      var maxPage = 1
+      var total = parseInt(total)
+      var pageSize = parseInt(pageSize)
+      if (total && pageSize) {
+        maxPage = Math.ceil(total / pageSize)
+      }
+      return maxPage || 0
+    }
+  }
+</wxs>

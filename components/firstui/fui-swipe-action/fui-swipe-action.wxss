@@ -1,0 +1,46 @@
+.fui-swipe__action-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.fui-swipe__action-inner {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.fui-swipe__action-left {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+}
+
+.fui-swipe__action-right {
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.fui-swipe__action-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 48rpx;
+}
+
+.fui-swipe__action-text {
+  flex-shrink: 0;
+}
+
+.fui-swipe__action-ani {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}

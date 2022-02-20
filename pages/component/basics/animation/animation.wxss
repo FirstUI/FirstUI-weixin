@@ -1,0 +1,12 @@
+.fui-page__bd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.fui-ani__box{
+  width: 240rpx;
+  height: 240rpx;
+  background-color: #6831FF;
+  color: #FFFFFF;
+}

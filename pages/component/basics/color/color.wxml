@@ -1,0 +1,17 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Color</view>
+    <view class="fui-page__desc">Color 色彩，First UI用色指南。</view>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <block wx:for="{{colors}}" wx:key="index">
+      <view class="fui-section__title">{{item.text}}</view>
+      <view bindtap="getColor" data-value="{{model.gradual || model.value}}" wx:for="{{item.data}}" wx:for-item="model"
+        wx:for-index="idx" wx:key="idx" class="fui-color__item fui-page__spacing fui-align__center"
+        style="background:{{model.gradual || model.value}};color:{{model.color}}">
+        <text>{{model.text}}</text>
+        <text>{{model.value}}</text>
+      </view>
+    </block>
+  </view>
+</view>

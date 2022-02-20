@@ -1,0 +1,13 @@
+page {
+  background-color: #fff;
+}
+
+.fui-align__center {
+  flex-wrap: wrap;
+}
+
+.fui-close__icon {
+  display: flex;
+  align-items: center;
+  padding: 6rpx 0 4rpx 24rpx;
+}

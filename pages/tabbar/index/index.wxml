@@ -1,0 +1,43 @@
+<view class="fui-wrap">
+  <view class="fui-banner__box">
+    <image class="fui-banner" src="{{resUrl}}/index/light/img_banner_3x.png" mode="widthFix"></image>
+    <view class="fui-banner__content">
+      <image class="fui-logo" src="/static/images/common/img_logo.png" mode="widthFix"></image>
+      <view class="fui-title">First UI</view>
+      <view class="fui-desc">First UI是一款轻量、全面可靠的移动端组件库。</view>
+    </view>
+    <view class="fui-tabs__box">
+      <scroll-view class="fui-scroll__box" id="fui_tabs" scroll-with-animation scroll-x
+        scroll-into-view="{{scrollInto}}">
+        <view class="fui-scroll__view fui-align__center">
+          <view wx:for="{{tabs}}" wx:for-item="tab" wx:key="index"
+            class="fui-tab__item fui-flex__center {{tabIndex===index?'fui-tab__item-active':''}}" id="{{tab.id}}"
+            bindtap="tabClick" data-index="{{index}}">
+            <view class="{{tabIndex===index?'fui-tab__item-text':''}}">{{ tab.name }}</view>
+          </view>
+        </view>
+      </scroll-view>
+      <swiper current="{{tabIndex}}" class="fui-swiper__box" duration="{{300}}" bindchange="tabChange"
+        style="height:{{height}}px">
+        <swiper-item class="fui-swiper__item" wx:for="{{tabs}}" wx:key="index" wx:for-item="tab">
+          <scroll-view class="fui-scroll__box" scroll-y style="height:{{height}}px">
+            <view class="fui-list__view">
+              <fui-list-cell arrow padding="0 32rpx" bottomBorder="{{false}}" radius="16rpx" marginTop="24"
+                wx:for="{{tab.data}}" wx:for-index="idx" wx:key="idx" bindclick="href" data-id="{{tab.id}}"
+                data-page="{{item.page}}">
+                <view class="fui-list__item fui-align__center">
+                  <view class="fui-item__icon-box">
+                    <image class="fui-item__icon" src="{{resUrl}}/index/light/icon_{{item.icon}}_3x.png"></image>
+                  </view>
+                  <text>{{item.name}}</text>
+                  <image wx:if="{{item.vip}}" class="fui-vip__icon" src="/static/images/index/light/icon_member_3x.png">
+                  </image>
+                </view>
+              </fui-list-cell>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

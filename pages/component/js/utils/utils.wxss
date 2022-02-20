@@ -1,0 +1,11 @@
+.fui-btn__flex-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fui-section__title:not(:first-child) {
+  margin-top: 72rpx;
+}

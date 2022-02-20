@@ -1,0 +1,33 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Card</view>
+    <view class="fui-page__desc">Card 卡片，常用的布局组件。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">基础使用</view>
+    <fui-card src="{{src}}" title="标题文字" tag="额外信息">
+      <view class="fui-card__content">这是一个基础卡片的示例，此处为自定义内容区域，自行控制内容样式。</view>
+    </fui-card>
+    <view class="fui-section__title">通栏展示</view>
+    <fui-card padding="20rpx 32rpx" full src="{{src}}" title="标题文字" tag="额外信息">
+      <view class="fui-card__content fui-padding">这是一个基础卡片的示例，此处为自定义内容区域，自行控制内容样式。</view>
+    </fui-card>
+    <view class="fui-section__title">推荐布局</view>
+    <fui-card src="{{src2}}" imageRadius="50%" title="First UI" color="#465CFF" tag="23小时前" headerLine="{{false}}" showBorder>
+      <view class="fui-list__item">
+        <image class="fui-cover" src="{{resUrl}}/cooperate/light/img_banner_3x.png" mode="widthFix">
+        </image>
+        <view class="fui-list__title">First UI重磅上线，一款轻量、全面、可靠的移动端组件库。</view>
+      </view>
+    </fui-card>
+    <view class="fui-section__title">推荐布局</view>
+    <fui-card>
+      <view class="fui-list__item">
+        <image class="fui-cover" src="{{resUrl}}/cooperate/dark/img_banner_3x.png" mode="widthFix"></image>
+      </view>
+      <view class="fui-card__title">
+        First UI重磅上线，一款轻量、全面、可靠的移动端组件库。
+      </view>
+    </fui-card>
+  </view>
+</view>

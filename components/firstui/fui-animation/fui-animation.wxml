@@ -1,0 +1,4 @@
+<view wx:if="{{isShow}}" class="fui-popup__animation {{ani.in}}"
+  style="{{'transform:' + transform + ';' + stylesObject}}" bindtap="change">
+  <slot></slot>
+</view>

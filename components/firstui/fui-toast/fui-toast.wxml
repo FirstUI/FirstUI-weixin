@@ -1,0 +1,10 @@
+<view class="fui-toast__wrap {{visible?'fui-toast__show':''}}">
+  <view class="fui-toast__inner" style="padding:{{padding}};background:{{background}};z-index:{{zIndex}}">
+    <slot></slot>
+    <view class="fui-toast__icon-box" wx:if="{{src}}" style="width:{{width}}rpx;height:{{width}}rpx">
+      <image class="fui-toast__icon" src="{{src}}" style="width:{{width}}rpx;height:{{width}}rpx">
+      </image>
+    </view>
+    <text class="fui-toast__text" style="font-size:{{size}}rpx;color:{{color}}" wx:if="{{text}}">{{text}}</text>
+  </view>
+</view>

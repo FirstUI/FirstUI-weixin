@@ -1,0 +1,5 @@
+<view class="fui-drawer__popup-wrap {{show?'fui-drawer__wrap-show':''}}" style="z-index: {{zIndex}};background:{{maskBackground}};align-items:{{direction==='left'?'flex-start':'flex-end'}}" catchtap="handleClose" catchtouchmove="stop">
+  <view class="fui-drawer__popup {{'fui-drawer_'+direction}} {{show?'fui-drawer__show':''}}" style="background:{{background}}" catchtap="stop">
+    <slot></slot>
+  </view>
+</view>

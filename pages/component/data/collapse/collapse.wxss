@@ -1,0 +1,36 @@
+page {
+  font-weight: normal;
+}
+
+.fui-wrap {
+  padding-bottom: 64rpx;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-item__box {
+  width: 100%;
+  padding: 26rpx 32rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.fui-logo {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 24rpx;
+  display: block;
+}
+
+.fui-descr {
+  width: 100%;
+  padding: 32rpx;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  color: #7F7F7F;
+  word-break: break-all;
+  box-sizing: border-box;
+}

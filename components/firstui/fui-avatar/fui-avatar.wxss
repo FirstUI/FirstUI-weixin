@@ -1,0 +1,60 @@
+.fui-avatar__wrap {
+  position: relative;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fui-avatar__img {
+  flex: 1;
+  display: block;
+  object-fit: cover;
+}
+
+.fui-avatar__text {
+  flex: 1;
+  display: block;
+  white-space: nowrap;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.fui-avatar__size-small {
+  width: 64rpx !important;
+  height: 64rpx !important;
+
+}
+
+.fui-avatar__text-small {
+  font-size: 32rpx !important;
+}
+
+.fui-avatar__size-middle {
+  width: 96rpx !important;
+  height: 96rpx !important;
+}
+
+.fui-avatar__text-middle {
+  font-size: 44rpx !important;
+}
+
+.fui-avatar__size-large {
+  width: 128rpx !important;
+  height: 128rpx !important;
+}
+
+.fui-avatar__text-large {
+  font-size: 56rpx !important;
+}
+
+.fui-avatar__circle {
+  border-radius: 50% !important;
+}
+
+.fui-avatar__square {
+  border-radius: 8rpx !important;
+}

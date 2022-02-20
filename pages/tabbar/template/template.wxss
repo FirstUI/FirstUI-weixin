@@ -1,0 +1,33 @@
+page{
+	background-color: #fff;
+	font-weight: normal;
+}
+.fui-content__box{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.fui-img__box{
+	width: 100%;
+	padding: 0 87rpx;
+	box-sizing: border-box;
+}
+.fui-img{
+	width: 100%;
+	height: 318rpx;
+}
+.fui-title{
+	text-align: center;
+	font-weight: 500;
+	color: #333333;
+	padding-top: 48rpx;
+}
+.fui-sub__title{
+	text-align: center;
+	font-size: 24rpx;
+	font-weight: 400;
+	color: #B2B2B2;
+	padding-top: 8rpx;
+}

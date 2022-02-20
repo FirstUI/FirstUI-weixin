@@ -1,0 +1,3 @@
+<fui-form-field name="{{name}}" value="{{val}}">
+		<slot></slot>
+	</fui-form-field>

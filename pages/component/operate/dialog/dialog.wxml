@@ -1,0 +1,14 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Dialog</view>
+    <view class="fui-page__desc">Dialog 对话框，在浮层中显示，引导用户进行相关操作。</view>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <fui-button type="gray" width="400rpx" height="84rpx" text="基础使用" bold margin="24rpx 0" bindclick="showDialog" data-type="1"></fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="自定义按钮" bold bindclick="showDialog" data-type="2">
+    </fui-button>
+  </view>
+  <fui-dialog show="{{show}}" content="弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内" maskClosable bindclick="onClick" bindclose="onClose"></fui-dialog>
+
+  <fui-dialog show="{{visible}}" title="我是标题" content="我是自定义的对话框！" buttons="{{buttons}}" bindclick="onTap"></fui-dialog>
+</view>

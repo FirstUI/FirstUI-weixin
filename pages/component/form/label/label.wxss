@@ -1,0 +1,19 @@
+page {
+  font-weight: normal;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-text {
+  font-size: 30rpx;
+  padding-left: 16rpx;
+}
+
+.fui-list__cell {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

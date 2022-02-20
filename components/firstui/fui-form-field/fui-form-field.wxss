@@ -1,0 +1,4 @@
+.fui-form__field {
+  display: none;
+  opacity: 0;
+}

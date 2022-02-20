@@ -1,0 +1,15 @@
+<view class="fui-button__wrap" style="width: {{width}};height: {{height}};margin:{{margin}};border-radius:{{radius}}"
+  bindtouchstart="handleStart" bindtouchend="handleClick" bindtouchcancel="handleEnd">
+  <button
+    class="fui-button {{bold ? 'fui-text__bold' : ''}} {{	time && (plain || type==='link') ? 'fui-button__opacity' : ''}} {{disabled && !disabledBackground ? 'fui-button__opacity' : ''}} {{!background && !disabledBackground && !plain?('fui-button__'+type):''}} {{!width || width==='100%' || width==='true'?'fui-button__flex-1':''}} {{time && !plain && type!=='link' ? 'fui-button__active' : ''}}"
+    style="width: {{width}};height: {{height}};line-height: {{height}};background: {{disabled && disabledBackground ? disabledBackground : (plain ? 'transparent' : background)}};border-width:{{borderWidth}};border-color: {{borderColor ? borderColor : disabled && disabledBackground ? disabledBackground : (background || 'transparent')}};border-radius: {{radius}};font-size: {{size}}rpx;color: {{disabled && disabledBackground ? disabledColor : color}}"
+    loading="{{loading}}" form-type="{{formType}}" open-type="{{openType}}" bindgetuserinfo="bindgetuserinfo"
+    bindgetphonenumber="bindgetphonenumber" bindcontact="bindcontact" binderror="binderror"
+    bindopensetting="bindopensetting" disabled="{{disabled}}">
+    <text
+      class="fui-button__text {{!background && !disabledBackground && !plain && type==='gray' && color==='#fff'?'fui-btn__gray-color':''}} {{bold?'fui-text__bold':''}}"
+      wx:if="{{text}}"
+      style="font-size: {{size}}rpx;line-height:{{size}}rpx;color:{{disabled && disabledBackground ? disabledColor : color}}">{{text}}</text>
+    <slot></slot>
+  </button>
+</view>

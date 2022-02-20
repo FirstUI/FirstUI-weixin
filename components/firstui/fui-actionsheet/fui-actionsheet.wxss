@@ -1,0 +1,128 @@
+.fui-actionsheet__wrap {
+  width: 100%;
+  visibility: hidden;
+  min-height: 100rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: all 0.25s ease-in-out;
+  transform-origin: center center;
+}
+
+.fui-as__bg-light {
+  background-color: #F8F8F8;
+}
+
+.fui-as__bg-dark {
+  background-color: #111111;
+}
+
+.fui-actionsheet__radius {
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+  overflow: hidden;
+}
+
+.fui-actionsheet__show {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.fui-actionsheet__tips {
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  padding: 40rpx 60rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+.fui-as__btn-light {
+  background-color: #FFFFFF;
+}
+
+.fui-as__btn-dark {
+  background-color: #222222;
+}
+
+.fui-actionsheet__operate-box {
+  padding-bottom: 12rpx;
+}
+
+.fui-actionsheet__btn {
+  width: 100%;
+  flex: 1;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* font-size: 32rpx; */
+  font-weight: normal;
+  position: relative;
+}
+
+.fui-actionsheet__btn:active {
+  background-color: var(--fui-bg-color-hover, rgba(0, 0, 0, 0.2)) !important;
+
+}
+
+.fui-actionsheet__btn-last {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fui-as__divider-light::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid var(--fui-color-border, #EEEEEE);
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fui-as__divider-dark::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid #333;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.fui-actionsheet__cancel {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.fui-actionsheet__mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--fui-bg-color-mask, rgba(0, 0, 0, 0.6));
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fui-actionsheet__mask-show {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "标签",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-tag": "/components/firstui/fui-tag/fui-tag"
+  }
+}

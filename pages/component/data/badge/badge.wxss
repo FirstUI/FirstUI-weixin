@@ -1,0 +1,25 @@
+page {
+  font-weight: normal;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-list__item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fui-item__img-box {
+  position: relative;
+  margin-right: 24rpx;
+}
+
+.fui-item__img {
+  width: 96rpx;
+  height: 96rpx;
+  display: block;
+}

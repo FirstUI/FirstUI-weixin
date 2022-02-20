@@ -1,0 +1,154 @@
+.fui-tag__wrap {
+  display: inline-flex;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  max-width: 100%;
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-width: 1rpx;
+  border-style: solid;
+  border-color: transparent;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fui-tag__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fui-tag__primary-dark {
+  background-color: var(--fui-color-primary, #465CFF) !important;
+  border-color: var(--fui-color-primary, #465CFF) !important;
+  color: #FFFFFF !important;
+}
+
+.fui-tag_primary-dark,
+.fui-tag_success-dark,
+.fui-tag_warning-dark,
+.fui-tag_danger-dark,
+.fui-tag_purple-dark {
+  color: #FFFFFF !important;
+}
+
+.fui-tag__success-dark {
+  background-color: var(--fui-color-success, #09BE4F) !important;
+  border-color: var(--fui-color-success, #09BE4F) !important;
+  color: #FFFFFF !important;
+}
+
+
+.fui-tag__warning-dark {
+  background-color: var(--fui-color-warning, #FFB703) !important;
+  border-color: var(--fui-color-warning, #FFB703) !important;
+  color: #FFFFFF !important;
+}
+
+.fui-tag__danger-dark {
+  background-color: var(--fui-color-danger, #FF2B2B) !important;
+  border-color: var(--fui-color-danger, #FF2B2B) !important;
+  color: #FFFFFF !important;
+}
+
+.fui-tag__purple-dark {
+  background-color: var(--fui-color-purple, #6831FF) !important;
+  border-color: var(--fui-color-purple, #6831FF) !important;
+  color: #FFFFFF !important;
+}
+
+.fui-tag__primary-light {
+  background-color: var(--fui-bg-color-grey, #F1F4FA) !important;
+  border-color: var(--fui-bg-color-grey, #F1F4FA) !important;
+  color: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-tag_primary-light,
+.fui-tag_primary-plain {
+  color: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-tag__success-light {
+  background-color: var(--fui-bg-color-green, rgba(9, 190, 79, .05)) !important;
+  border-color: var(--fui-bg-color-green, rgba(9, 190, 79, .05)) !important;
+  color: var(--fui-color-success, #09BE4F) !important;
+}
+
+.fui-tag_success-light,
+.fui-tag_success-plain {
+  color: var(--fui-color-success, #09BE4F) !important;
+}
+
+.fui-tag__warning-light {
+  background-color: var(--fui-bg-color-yellow, rgba(255, 183, 3, .1)) !important;
+  border-color: var(--fui-bg-color-yellow, rgba(255, 183, 3, .1)) !important;
+  color: var(--fui-color-warning, #FFB703) !important;
+
+}
+
+.fui-tag_warning-light,
+.fui-tag_warning-plain {
+  color: var(--fui-color-warning, #FFB703) !important;
+
+}
+
+.fui-tag__danger-light {
+  background-color: var(--fui-bg-color-red, rgba(255, 43, 43, .05)) !important;
+  border-color: var(--fui-bg-color-red, rgba(255, 43, 43, .05)) !important;
+  color: var(--fui-color-danger, #FF2B2B) !important;
+}
+
+.fui-tag__danger-light,
+.fui-tag__danger-plain {
+  color: var(--fui-color-danger, #FF2B2B) !important;
+}
+
+.fui-tag__purple-light {
+  background-color: var(--fui-bg-color-purple, rgba(104, 49, 255, .05)) !important;
+  border-color: var(--fui-bg-color-purple, rgba(104, 49, 255, .05)) !important;
+  color: var(--fui-color-purple, #6831FF) !important;
+}
+
+.fui-tag_purple-light,
+.fui-tag_purple-plain {
+  color: var(--fui-color-purple, #6831FF) !important;
+}
+
+.fui-tag__primary-plain {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: var(--fui-color-primary, #465CFF) !important;
+  color: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-tag__success-plain {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: var(--fui-color-success, #09BE4F) !important;
+  color: var(--fui-color-success, #09BE4F) !important;
+}
+
+.fui-tag__warning-plain {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: var(--fui-color-warning, #FFB703) !important;
+  color: var(--fui-color-warning, #FFB703) !important;
+}
+
+.fui-tag__danger-plain {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: var(--fui-color-danger, #FF2B2B) !important;
+  color: var(--fui-color-danger, #FF2B2B) !important;
+}
+
+.fui-tag__purple-plain {
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: var(--fui-color-purple, #6831FF) !important;
+  color: var(--fui-color-purple, #6831FF) !important;
+
+}
+
+.fui-tag__opacity:active {
+  opacity: 0.5;
+}

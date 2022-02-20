@@ -1,0 +1,33 @@
+.fui-top__popup-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  transition: all ease-in-out .2s;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.fui-top__popwrap-show {
+  opacity: 1;
+  visibility: visible;
+}
+.fui-top__popup {
+  width: 100%;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.3s ease-in-out;
+  min-height: 20rpx;
+  flex: 1;
+  overflow: hidden;
+}
+
+.fui-top__popup-show {
+  transform: translate3d(0, 0, 0);
+}

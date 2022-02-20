@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "徽章",
+  "usingComponents": {
+    "fui-badge":"/components/firstui/fui-badge/fui-badge"
+  }
+}

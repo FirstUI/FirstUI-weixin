@@ -1,0 +1,39 @@
+page {
+  background-color: #FFFFFF;
+  /* 可通过此变量控制边框颜色 */
+  /* --fui-color-border:#465CFF; */
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-grid__cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  font-size: 28rpx;
+  font-weight: 400;
+}
+
+.fui-padding {
+  padding: 36rpx 0;
+}
+
+.fui-icon {
+  width: 96rpx;
+  height: 96rpx;
+  margin-bottom: 16rpx;
+}
+
+.fui-icon__2x {
+  width: 64rpx;
+  height: 64rpx;
+  margin-bottom: 16rpx;
+}
+
+.fui-flex__column {
+  flex: 1;
+}

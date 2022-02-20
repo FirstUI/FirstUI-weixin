@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "下拉菜单",
+  "usingComponents": {
+    "fui-dropdown-list": "/components/firstui/fui-dropdown-list/fui-dropdown-list"
+  }
+}

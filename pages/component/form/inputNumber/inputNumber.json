@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "数字输入框",
+  "backgroundColorTop": "#FFFFFF",
+  "backgroundColorBottom": "#FFFFFF",
+  "backgroundColor": "#FFFFFF",
+  "usingComponents": {
+    "fui-input-number": "/components/firstui/fui-input-number/fui-input-number"
+  }
+}

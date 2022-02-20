@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "顶部弹出层",
+  "usingComponents": {
+    "fui-top-popup":"/components/firstui/fui-top-popup/fui-top-popup"
+  }
+}

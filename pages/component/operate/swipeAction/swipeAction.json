@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "滑动菜单",
+  "usingComponents": {
+    "fui-swipeaction-group": "/components/firstui/fui-swipeaction-group/fui-swipeaction-group",
+    "fui-swipe-action": "/components/firstui/fui-swipe-action/fui-swipe-action"
+  }
+}

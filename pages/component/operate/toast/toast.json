@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "轻提示",
+  "usingComponents": {
+    "fui-toast":"/components/firstui/fui-toast/fui-toast"
+  }
+}

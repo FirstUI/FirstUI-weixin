@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分页器",
+  "usingComponents": {
+    "fui-pagination": "/components/firstui/fui-pagination/fui-pagination"
+  }
+}

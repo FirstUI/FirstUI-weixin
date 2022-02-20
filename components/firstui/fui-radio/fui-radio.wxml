@@ -1,0 +1,23 @@
+<view class="fui-radio__input {{disabled?'fui-radio__disabled':''}} {{!color && val && !isCheckMark?'fui-radio__color':''}}" style="background:{{parse.getBackgroundColor(val,isCheckMark,color)}};border-color:{{parse.getBorderColor(val,isCheckMark, color, borderColor)}};zoom:{{scaleRatio}};border-radius:{{borderRadius}}" catchtap="radioChange">
+  <view class="fui-check__mark" style="border-bottom-color:{{checkMarkColor}};border-right-color:{{checkMarkColor}}" wx:if="{{val}}"></view>
+  <radio class="fui-radio__hidden" color="{{color}}" disabled="{{disabled}}" value="{{value}}" checked="{{val}}"></radio>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getBackgroundColor: function (val, isCheckMark, color) {
+      var _color = val ? color : '#fff'
+      if (isCheckMark) {
+        _color = 'transparent'
+      }
+      return _color;
+    },
+    getBorderColor: function (val, isCheckMark, color, borderColor) {
+      var _color = val ? color : borderColor;
+      if (isCheckMark) {
+        _color = 'transparent'
+      }
+      return _color;
+    }
+  }
+</wxs>

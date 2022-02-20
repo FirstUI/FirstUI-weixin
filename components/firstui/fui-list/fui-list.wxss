@@ -1,0 +1,39 @@
+.fui-list__wrap {
+  width: 100%;
+}
+
+.fui-list__title,
+.fui-list__footer {
+  line-height: 1;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+.fui-list__container {
+  position: relative;
+  width: 100%;
+}
+
+.fui-list__border-top {
+  position: absolute;
+  top: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
+  z-index: 1;
+}
+
+.fui-list__border-bottom {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  transform-origin: 0 100%;
+  z-index: 1;
+}
+
+.fui-list__border-color {
+  background-color: var(--fui-color-border, #EEEEEE) !important;
+}

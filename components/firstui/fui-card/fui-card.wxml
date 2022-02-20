@@ -1,0 +1,17 @@
+<view class="fui-card__wrap {{full?'fui-card__full':''}} {{showBorder?'fui-card__border':''}} {{showBorder && !isNvue && !full?'fui-card__border-radius':''}}" style="margin:{{margin}};background:{{background}};border-radius:{{radius}};box-shadow:{{shadow}}" bindtap="handleClick">
+  <view class="fui-card__header {{headerLine?'fui-card__header-line':''}}" wx:if="{{tag || title || src}}" style="border-top-left-radius:{{full?0:radius}};border-top-right-radius:{{full?0:radius}};padding:{{padding}}">
+    <view class="fui-card__header-left">
+      <image src="{{src}}" class="fui-card__header-thumb" mode="widthFix" wx:if="{{src}}" style="height:{{height}}rpx;width:{{width}}rpx;border-radius:{{imageRadius}}"></image>
+      <text class="fui-card__header-title" style="font-size:{{size}}rpx;color:{{color}}" wx:if="{{title}}">{{title}}</text>
+    </view>
+    <view class="fui-card__header-right" wx:if="{{tag}}">
+      <text style="font-size:{{tagSize}}rpx;color:{{tagColor}}">{{tag}}</text>
+    </view>
+  </view>
+  <view class="fui-card__body">
+    <slot></slot>
+  </view>
+  <view class="fui-card__footer" style="border-bottom-left-radius:{{full?0:radius}};border-bottom-right-radius:{{full?0:radius}}">
+    <slot name="footer"></slot>
+  </view>
+</view>

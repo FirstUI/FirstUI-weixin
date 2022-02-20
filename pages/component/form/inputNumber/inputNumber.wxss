@@ -1,0 +1,4 @@
+page {
+  font-weight: normal;
+  background-color: #fff;
+}

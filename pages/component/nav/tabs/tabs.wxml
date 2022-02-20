@@ -1,0 +1,17 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Tabs</view>
+    <view class="fui-page__desc">Tabs 标签页，分隔内容上有关联但属于不同类别的数据集合。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">基础使用</view>
+    <fui-tabs tabs="{{tabs}}" current="{{1}}" bindchange="change"></fui-tabs>
+    <view class="fui-section__title">改变颜色</view>
+    <fui-tabs tabs="{{tabs}}" selectedColor="#FFB703" sliderBackground="#FFB703"></fui-tabs>
+    <view class="fui-section__title">滑块与内容同宽</view>
+    <fui-tabs tabs="{{tabs}}" short="{{false}}"></fui-tabs>
+    <view class="fui-section__title">超出一屏，禁用（标签八）
+    </view>
+    <fui-tabs tabs="{{tabs2}}" isDot scroll alignLeft></fui-tabs>
+  </view>
+</view>

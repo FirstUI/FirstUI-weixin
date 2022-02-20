@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "动画",
+  "usingComponents": {
+    "fui-animation":"/components/firstui/fui-animation/fui-animation"
+  }
+}

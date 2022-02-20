@@ -1,0 +1,56 @@
+.fui-checkbox__input {
+  font-size: 0;
+  color: rgba(0, 0, 0, 0);
+  width: 40rpx;
+  height: 40rpx;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-flex;
+  box-sizing: border-box;
+  border-radius: 50%;
+  vertical-align: top;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.fui-checkbox__color {
+  background: var(--fui-color-primary, #465CFF) !important;
+  border-color: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-check__mark {
+  width: 20rpx;
+  height: 40rpx;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #FFFFFF;
+  border-right-style: solid;
+  border-right-width: 3px;
+  border-right-color: #FFFFFF;
+  box-sizing: border-box;
+  transform: rotate(45deg) scale(0.5) translateZ(0);
+  transform-origin: 54% 48%;
+}
+
+.fui-checkbox__hidden {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 0 none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+.fui-checkbox__disabled {
+  opacity: 0.6;
+}

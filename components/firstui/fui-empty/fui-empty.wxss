@@ -1,0 +1,35 @@
+.fui-empty__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fui-empty__fixed {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+.fui-empty__title {
+  text-align: center;
+  font-weight: 500;
+  padding-top: 48rpx;
+}
+
+.fui-empty__desc {
+  text-align: center;
+  font-weight: normal;
+  padding-top: 8rpx;
+}
+
+.fui-empty__title-color {
+  color: var(--fui-color-section, #333333) !important;
+}
+
+.fui-empty__descr-color {
+  color: var(--fui-color-label, #B2B2B2) !important;
+}

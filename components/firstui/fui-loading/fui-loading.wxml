@@ -1,0 +1,10 @@
+<view class="{{isMask && isFixed?'fui-loading__mask':''}}">
+  <view class="fui-loading fui-loading__wrap {{isFixed?'fui-loading__fixed':''}}" style="background: {{backgroundColor}};position:{{isFixed?'fixed':'static'}}" wx:if="{{type === 'col'}}">
+    <image class="fui-loading__ani" src="{{srcCol}}"></image>
+    <text class="fui-loading__text" style="color:{{colColor}};font-size:{{size}}rpx;line-height:{{size}}rpx">{{ text }}</text>
+  </view>
+  <view wx:else class="fui-loading fui-loading__row {{isFixed?'fui-loading__fixed':''}}" style="position:{{isFixed?'fixed':'static'}}">
+    <image class="fui-loading-row__ani" src="{{srcRow}}"></image>
+    <text class="fui-loading__text" style="color:{{rowColor}};font-size:{{size}}rpx;line-height:{{size}}rpx">{{ text }}</text>
+  </view>
+</view>

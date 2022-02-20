@@ -1,0 +1,48 @@
+page {
+  font-weight: normal;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+
+.fui-filter__icon {
+  flex-shrink: 0;
+  transition: all .15s linear;
+}
+
+.fui-icon__ani {
+  transform: rotate(180deg);
+}
+
+.fui-list__cell {
+  width: 100%;
+}
+
+.fui-select {
+  flex: 1;
+  height: 80rpx;
+  padding: 32rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.fui-input {
+  font-size: 32rpx;
+  flex: 1;
+  padding-right: 8rpx;
+}
+
+.fui-select::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 200%;
+  border: 1px solid #eee;
+  transform: scale(.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+}

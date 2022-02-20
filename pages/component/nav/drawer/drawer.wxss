@@ -1,0 +1,28 @@
+page {
+  font-weight: normal;
+}
+
+.fui-page__bd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fui-scroll__view {
+  width: 520rpx;
+  flex: 1;
+  overflow: hidden;
+}
+
+.fui-title {
+  padding: 64rpx 32rpx 32rpx;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.fui-btn__box {
+  padding: 40rpx 0;
+  display: flex;
+  justify-content: center;
+}

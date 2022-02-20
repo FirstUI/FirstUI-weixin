@@ -1,0 +1,6 @@
+<view class="fui-segmented__control {{disabled?'fui-segmented__disabled':''}}" style="margin-top:{{marginTop}}rpx;margin-bottom:{{marginBottom}}rpx">
+  <view class="fui-segmented__item {{index===0 && type==='button'?'fui-segmented__first':''}} {{currentIndex===index && !color && type==='button'?'fui-seg__item-bg':''}} {{!color && type==='button'?'fui-seg__item-border':''}} {{type==='button'?'fui-segmented__item-border':''}}" wx:for="{{vals}}" wx:key="index" style="border-top-left-radius:{{index===0?radius+'rpx':'0'}};border-bottom-left-radius:{{index===0?radius+'rpx':'0'}};border-top-right-radius:{{index===values.length - 1?radius+'rpx':'0'}};border-bottom-right-radius:{{index===values.length - 1?radius+'rpx':'0'}};border-color:{{type==='button'?color:'transparent'}};background:{{currentIndex===index && type==='button'?color:'transparent'}};height:{{height}}rpx" bindtap="handleClick" data-index="{{index}}">
+    <text style="font-size:{{size}}rpx;color:{{currentIndex===index?activeColor:color}};font-weight:{{bold && currentIndex===index ?600:400}}" class="{{item.disabled?'fui-segmented__disabled':''}} {{!color && currentIndex!==index?'fui-seg__text-color':''}}">{{item.name}}</text>
+    <view class="fui-segmented__item-line" wx:if="{{currentIndex===index && type==='text'}}" style="background:{{activeColor}}"></view>
+  </view>
+</view>

@@ -1,0 +1,56 @@
+:host {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+}
+
+.fui-row__box {
+  flex: 1;
+  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  position: relative;
+}
+
+.fui-row__box::before,
+.fui-row__box::after {
+  display: table;
+  content: " ";
+}
+
+.fui-row__box::after {
+  clear: both;
+}
+
+.fui-row__flex {
+  display: flex !important;
+  flex-direction: row;
+}
+
+.fui-row__middle {
+  align-items: center;
+}
+
+.fui-row__bottom {
+  align-items: flex-end;
+}
+
+.fui-row__before {
+  display: table
+}
+
+.fui-row__end {
+  justify-content: flex-end;
+}
+
+.fui-row__center {
+  justify-content: center;
+}
+
+.fui-row__space-around {
+  justify-content: space-around;
+}
+
+.fui-row__space-between {
+  justify-content: space-between;
+}

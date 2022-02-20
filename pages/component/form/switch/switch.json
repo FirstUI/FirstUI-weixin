@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "开关",
+  "usingComponents": {
+    "fui-label":"/components/firstui/fui-label/fui-label",
+    "fui-switch":"/components/firstui/fui-switch/fui-switch"
+  }
+}

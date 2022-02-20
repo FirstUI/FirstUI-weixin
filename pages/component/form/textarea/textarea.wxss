@@ -1,0 +1,14 @@
+page {
+  font-weight: normal;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-textarea__box {
+  width: 100%;
+  padding: 32rpx;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}

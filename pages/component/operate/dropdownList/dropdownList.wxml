@@ -1,0 +1,49 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">DropdownList</view>
+    <view class="fui-page__desc">DropdownList 下拉菜单，用于弹出一个菜单给用户选择操作，此组件为兼容Nvue端而写，居中弹出。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">基础使用</view>
+    <fui-list-cell highlight="{{false}}">
+      <view class="fui-list__cell fui-flex__center">
+        <text>资产类别：</text>
+        <view class="fui-select fui-flex__between" bindtap="assetsTap">
+          <input placeholder="请选择" value="{{assets}}" class="fui-input" disabled />
+          <view class="fui-filter__icon {{assetsShow?'fui-icon__ani':''}}">
+            <fui-icon name="turningdown" size="{{32}}"></fui-icon>
+          </view>
+        </view>
+      </view>
+    </fui-list-cell>
+    <view class="fui-section__title">固定高度、宽度 / 可滚动</view>
+    <fui-list-cell highlight="{{false}}">
+      <view class="fui-list__cell fui-flex__center">
+        <text>问题分类：</text>
+        <view class="fui-select fui-flex__between" bindtap="quesTap">
+          <input placeholder="请选择" value="{{question}}" class="fui-input" disabled />
+          <view class="fui-filter__icon {{quesShow?'fui-icon__ani':''}}">
+            <fui-icon name="turningdown" size="{{32}}"></fui-icon>
+          </view>
+        </view>
+      </view>
+    </fui-list-cell>
+    <view class="fui-section__title">不显示选择框</view>
+    <fui-list-cell highlight="{{false}}">
+      <view class="fui-list__cell fui-flex__center">
+        <text>问题分类：</text>
+        <view class="fui-select fui-flex__between" bindtap="tagTap">
+          <input placeholder="请选择" value="{{tag}}" class="fui-input" disabled />
+          <view class="fui-filter__icon {{tagShow?'fui-icon__ani':''}}">
+            <fui-icon name="turningdown" size="{{32}}"></fui-icon>
+          </view>
+        </view>
+      </view>
+    </fui-list-cell>
+  </view>
+
+  <fui-dropdown-list options="{{options}}" id="ddlAssets" bindclick="assetsItemClick" bindclose="assetsClose">
+  </fui-dropdown-list>
+  <fui-dropdown-list height="{{600}}" width="{{480}}" checkboxColor="#FFB703" options="{{options2}}" id="ddlQues" bindclick="quesItemClick" bindclose="quesClose"></fui-dropdown-list>
+  <fui-dropdown-list isCheckbox="{{false}}" selectedColor="#FFB703" splitLine height="{{600}}" width="{{400}}" options="{{options3}}" id="ddlTag" bindclick="tagItemClick" bindclose="tagClose"></fui-dropdown-list>
+</view>

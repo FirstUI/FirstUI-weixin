@@ -1,0 +1,35 @@
+.fui-divider__wrap {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fui-divider__line {
+  position: absolute;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: scaleY(0.5) translate3d(-50%, -50%, 0);
+  transform: scaleY(0.5) translate3d(-50%, -50%, 0);
+}
+
+.fui-divider__text-box {
+  position: relative;
+  text-align: center;
+  padding: 0 6rpx;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.fui-divider__text {
+  padding: 0 12rpx;
+}

@@ -1,0 +1,23 @@
+<view class="fui-input__number">
+  <view class="fui-number__minus {{disabled || min >= inputValue ? 'fui-number__disabled' : ''}}" bindtap="minus" style="min-height:{{parse.getMinHeight(height)}}rpx">
+    <view class="fui-minus__sign" style="background:{{signColor}};width:{{signWidth}}rpx" wx:if="{{!custom}}">
+    </view>
+    <slot></slot>
+  </view>
+  <input type="number" model:value="{{inputValue}}" disabled="{{disabled}}" bindblur="blur" class="fui-number__input" style="color: {{color}};font-size: {{size}}rpx;background-color: {{backgroundColor}};height:{{height}}rpx;min-height:{{height}}rpx;width:{{width}}rpx;border-radius:{{radius}}rpx;margin-left:{{margin}}rpx;margin-right:{{margin}}rpx" bindinput="bindinput"/>
+  <view class="fui-number__plus {{disabled || inputValue >= max ? 'fui-number__disabled' : ''}}" style="min-width:{{signWidth}}rpx;min-height:{{signWidth}}rpx" bindtap="plus">
+    <view class="fui-plus__sign-col" style="height:{{signWidth}}rpx;background:{{signColor}};left:50%;" wx:if="{{!custom}}">
+    </view>
+    <view class="fui-plus__sign-row" style="width:{{signWidth}}rpx;background:{{signColor}}" wx:if="{{!custom}}">
+    </view>
+    <slot name="plus"></slot>
+  </view>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getMinHeight: function (height) {
+      return parseInt(height) - 8
+    }
+  }
+</wxs>

@@ -1,0 +1,43 @@
+.fui-toast__wrap {
+  position: fixed;
+  left: 15%;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1002;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  transition-property: opacity, visibility;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+
+.fui-toast__inner {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 16rpx;
+}
+
+.fui-toast__show {
+  visibility: visible;
+  opacity: 1;
+}
+.fui-toast__icon-box {
+  padding-bottom: 20rpx;
+}
+
+.fui-toast__icon {
+  display: block;
+}
+.fui-toast__text {
+  font-weight: 400;
+  text-align: center;
+  word-break: break-all;
+}

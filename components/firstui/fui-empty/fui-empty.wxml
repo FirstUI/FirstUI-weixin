@@ -1,0 +1,6 @@
+<view class="fui-empty__wrap {{isFixed?'fui-empty__fixed':''}}" style="margin-top:{{marginTop}}rpx">
+  <image src="{{src}}" style="width:{{width}}rpx;height:{{height}}rpx" mode="widthFix" wx:if="{{src}}"></image>
+  <text class="fui-empty__title {{!color?'fui-empty__title-color':''}}" style="color:{{color}};font-size:{{size}}rpx" wx:if="{{title}}">{{title}}</text>
+  <text class="fui-empty__desc {{!descrColor?'fui-empty__descr-color':''}}" style="color:{{descrColor}};font-size:{{descrSize}}rpx" wx:if="{{descr}}">{{descr}}</text>
+  <slot></slot>
+</view>

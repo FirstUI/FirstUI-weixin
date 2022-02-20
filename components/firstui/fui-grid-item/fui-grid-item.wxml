@@ -1,0 +1,7 @@
+<view style="width:{{width}};height:{{height?height:'auto'}}" class="fui-grid__item {{width?'':'fui-grid__item-hidden'}}" >
+  <view class="fui-grid__item-box {{showBorder?'fui-grid__item-border':''}} {{highlight?'fui-highlight':''}}"
+    style="border-right-color: {{borderColor}};border-bottom-color: {{borderColor}};border-top-color: {{borderColor}};background-color:{{backgroundColor}}"
+    bindtap="handleClick">
+    <slot></slot>
+  </view>
+</view>

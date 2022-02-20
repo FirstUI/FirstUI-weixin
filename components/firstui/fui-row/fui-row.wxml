@@ -1,0 +1,5 @@
+<view
+  class="fui-row__box {{flex?'fui-row__flex':''}} {{justify !== 'start' ? 'fui-row__'+justify : ''}} {{align !== 'top' ? 'fui-row__'+align : ''}}"
+  style="margin-top:{{marginTop}};margin-bottom:{{marginBottom}};margin-left:-{{gutter / 2}}rpx;margin-right:-{{gutter / 2}}rpx">
+  <slot></slot>
+</view>

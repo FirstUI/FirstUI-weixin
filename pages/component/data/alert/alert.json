@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "警告框",
+  "usingComponents": {
+    "fui-alert":"/components/firstui/fui-alert/fui-alert"
+  }
+}

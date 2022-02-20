@@ -1,0 +1,48 @@
+.fui-input__number {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fui-number__minus {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.fui-minus__sign {
+  height: 2px;
+  border-radius: 2px;
+}
+
+.fui-number__plus {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.fui-plus__sign-col {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  border-radius: 2px;
+}
+
+.fui-plus__sign-row {
+  height: 2px;
+  border-radius: 2px;
+}
+
+.fui-number__input {
+  text-align: center;
+  font-weight: 500;
+}
+
+.fui-number__disabled {
+  opacity: 0.6;
+}

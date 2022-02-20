@@ -1,0 +1,5 @@
+<view class="fui-bottom__popup-wrap {{show?'fui-bottom__popwrap-show':''}}" style="z-index:{{zIndex}};background:{{maskBackground}}" catchtap="handleClose" catchtouchmove="stop">
+  <view  class="fui-bottom__popup {{show?'fui-bottom__popup-show':''}}" style="border-top-left-radius:{{radius}}rpx;border-top-right-radius:{{radius}}rpx;background:{{background}}" catchtap="stop">
+    <slot></slot>
+  </view>
+</view>

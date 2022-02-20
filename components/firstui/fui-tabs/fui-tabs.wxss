@@ -1,0 +1,139 @@
+
+.fui-tabs__scrollbox {
+  width: 100%;
+  flex: 1;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.fui-tabs__fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.fui-tabs__sticky {
+  position: sticky;
+  left: 0;
+  right: 0;
+}
+
+.fui-scroll__view {
+  min-width: 100%;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.fui-tabs__item {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  position: relative;
+}
+
+.fui-tabs__full {
+  flex: 1;
+}
+
+.fui-tabs__text-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.fui-tabs__wrap-disabled {
+  opacity: 0.5;
+}
+
+.fui-tabs__icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 12rpx;
+}
+
+.fui-tabs__item-column {
+  flex-direction: column !important;
+}
+
+.fui-tabs__icon-column {
+  margin-right: 0 !important;
+  margin-bottom: 8rpx;
+}
+
+.fui-tabs__text {
+  white-space: nowrap;
+  display: block;
+  transition: transform 0.2s linear;
+  /* transform-origin: center center; */
+  position: relative;
+  z-index: 3;
+}
+
+.fui-tabs__badge {
+  height: 36rpx;
+  padding: 0 12rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  border-radius: 100px;
+  min-width: 36rpx !important;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -32rpx;
+  top: -18rpx;
+  transform: scale(0.9);
+  z-index: 10;
+}
+
+.fui-tabs__badge-dot {
+  height: 8px !important;
+  width: 8px !important;
+  display: inline-block;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: -3px;
+  z-index: 10;
+}
+
+.fui-tabs__ac-line {
+  position: absolute;
+  border-radius: 2px;
+  z-index: 2;
+  transition: transform 0.2s linear;
+}
+
+.fui-tabs__line-short {
+  width: 45rpx !important;
+}
+
+.fui-tabs__selected-color {
+  color: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-tabs__text-color {
+  color: var(--fui-color-subtitle, #7F7F7F) !important;
+}
+
+.fui-tabs__slider-color {
+  background: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-tabs__badge-color {
+  background: var(--fui-color-danger, #FF2B2B) !important;
+}

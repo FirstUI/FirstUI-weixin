@@ -1,0 +1,33 @@
+<view class="fui-avatar__wrap {{width?'':'fui-avatar__size-'+size}} {{radius===-1?'fui-avatar__'+shape:''}}" style="{{parse.wrapStyles(background, marginRight, marginBottom, width, height, radius)}}" bindtap="handleClick">
+  <image class="fui-avatar__img {{radius===-1?'fui-avatar__'+shape:''}} {{width?'':'fui-avatar__size-'+size}}" style="{{parse.styles(width, height, radius)}}" src="{{src}}" mode="{{mode}}" wx:if="{{src}}" webp="{{webp}}" lazy-load="{{lazyLoad}}"></image>
+  <text class="fui-avatar__text {{width?'':'fui-avatar__text-'+size}}" wx:if="{{!src && text}}" style="{{parse.textStyles(color, fontWeight, fontSize)}}">{{text}}</text>
+  <slot></slot>
+</view>
+
+<wxs module="parse">
+  var styles = function (width, height, radius) {
+    var styles = '';
+    if (width) {
+      styles = "width:" + width + "rpx;height:" + (height || width) + "rpx;"
+    }
+    if (radius !== -1) {
+      styles += "border-radius:" + radius + "rpx;"
+    }
+    return styles;
+  }
+  module.exports = {
+    wrapStyles: function (background, marginRight, marginBottom, width, height, radius) {
+      var style = "background:" + background + ";margin-right:" + marginRight + "rpx;margin-bottom:" + marginBottom + "rpx;"
+
+      return style + styles(width, height, radius)
+    },
+    styles: styles,
+    textStyles: function (color, fontWeight, fontSize) {
+      var styles = "color:" + color + ";font-weight:" + fontWeight + ";";
+      if (fontSize) {
+        styles += "font-size:" + fontSize + "rpx;"
+      }
+      return styles;
+    }
+  }
+</wxs>

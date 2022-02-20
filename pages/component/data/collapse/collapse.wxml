@@ -1,0 +1,68 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Collapse</view>
+    <view class="fui-page__desc">Collapse 折叠面板，可以折叠/展开的内容区域。</view>
+  </view>
+  <view class="fui-page__bd">
+    <view class="fui-section__title">基础使用</view>
+    <!--fui-collapse-item可单独使用 bindchange事件仅无父组件fui-collapse时生效-->
+    <fui-collapse-item bindchange="change">
+      <view class="fui-item__box">
+        <image src="/static/images/common/logo.png" class="fui-logo"></image>
+        <text>First UI</text>
+      </view>
+      <view class="fui-descr" slot="content">First UI 是一套基于uni-app开发的组件化、可复用、易扩展、低耦合的跨平台移动端UI 组件库。</view>
+    </fui-collapse-item>
+    <view class="fui-section__title">默认展开</view>
+    <fui-collapse bindchange="change">
+      <fui-collapse-item index="{{index}}" open="{{item.isOpen}}" wx:for="{{items}}" wx:key="index">
+        <view class="fui-item__box">
+          <image src="{{item.src}}" class="fui-logo"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view slot="content" class="fui-descr" style="background-color: rgba(255, 183, 3, .1);">{{item.descr}}</view>
+      </fui-collapse-item>
+    </fui-collapse>
+    <view class="fui-section__title">手风琴效果</view>
+    <fui-collapse accordion bindchange="change">
+      <fui-collapse-item index="{{index}}" wx:for="{{items}}" wx:key="index">
+        <view class="fui-item__box">
+          <image src="{{item.src}}" class="fui-logo"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view slot="content" class="fui-descr" style="background-color: rgba(255, 183, 3, .1);">{{item.descr}}</view>
+      </fui-collapse-item>
+    </fui-collapse>
+    <view class="fui-section__title">无动画效果</view>
+    <fui-collapse bindchange="change">
+      <fui-collapse-item animation="{{false}}" arrowColor="#333" index="{{index}}" wx:for="{{items}}" wx:key="index">
+        <view class="fui-item__box">
+          <image src="{{item.src}}" class="fui-logo"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view slot="content" class="fui-descr" style="background-color: rgba(255, 183, 3, .1);">{{item.descr}}</view>
+      </fui-collapse-item>
+    </fui-collapse>
+    <view class="fui-section__title">禁用不可点击</view>
+    <fui-collapse bindchange="change">
+      <fui-collapse-item disabled="{{index===1}}" arrowColor="#333" index="{{index}}" wx:for="{{items}}" wx:key="index">
+        <view class="fui-item__box">
+          <image src="{{item.src}}" class="fui-logo"></image>
+          <text>{{item.title}}</text>
+        </view>
+        <view slot="content" class="fui-descr" style="background-color: rgba(255, 183, 3, .1);">{{item.descr}}</view>
+      </fui-collapse-item>
+    </fui-collapse>
+    <view class="fui-section__title">不显示箭头</view>
+    <fui-collapse accordion bindchange="change">
+      <fui-collapse-item arrow="{{false}}" index="{{index}}" wx:for="{{list}}" wx:key="index">
+        <fui-list-cell padding="0">
+          <view class="fui-item__box">
+            <text style="font-size: 28rpx;">{{item.question}}</text>
+          </view>
+        </fui-list-cell>
+        <view slot="content" class="fui-descr" style="color: #09BE4F;">{{item.answer}}</view>
+      </fui-collapse-item>
+    </fui-collapse>
+  </view>
+</view>

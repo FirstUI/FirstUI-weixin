@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "列表",
+  "usingComponents": {
+    "fui-list": "/components/firstui/fui-list/fui-list",
+    "fui-badge":"/components/firstui/fui-badge/fui-badge"
+  }
+}

@@ -1,0 +1,10 @@
+<view class="fui-switch__input" style="zoom:{{scaleRatio}}">
+  <view class="fui-switch__input-def {{val?'fui-switch__input--checked':''}} {{disabled?'fui-checkbox__disabled':''}} {{val && !color?'fui-switch__color':''}}" style="background:{{val?color:'#dfdfdf'}};border-color:{{val?color:borderColor}}" wx:if="{{type==='switch'}}">
+    <switch class="fui-switch__hidden" bindchange="change" name="{{name}}" checked="{{val}}" disabled="{{disabled}}" color="{{color}}">
+    </switch>
+  </view>
+  <view class="fui-checkbox__self {{disabled?'fui-checkbox__disabled':''}} {{!color && val?'fui-switch__color':''}}" style="background:{{val?color:'#fff'}};border:1px solid {{val?color:borderColor}}" wx:else>
+    <view class="fui-check__mark" style="border-bottom-color:{{checkMarkColor}};border-right-color:{{checkMarkColor}}" wx:if="{{val}}"></view>
+    <switch class="fui-switch__hidden" bindchange="change" name="{{name}}" type="checkbox" checked="{{val}}" disabled="{{disabled}}"></switch>
+  </view>
+</view>

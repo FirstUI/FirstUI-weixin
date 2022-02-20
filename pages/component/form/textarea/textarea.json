@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "多行输入框",
+  "usingComponents": {
+    "fui-textarea":"/components/firstui/fui-textarea/fui-textarea"
+  }
+}

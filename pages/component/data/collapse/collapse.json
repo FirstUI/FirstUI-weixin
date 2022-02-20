@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "折叠面板",
+  "usingComponents": {
+    "fui-collapse": "/components/firstui/fui-collapse/fui-collapse",
+    "fui-collapse-item": "/components/firstui/fui-collapse-item/fui-collapse-item"
+  }
+}

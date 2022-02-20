@@ -1,0 +1,29 @@
+page {
+  font-weight: normal;
+  /* 可使用此变量改变list线条颜色 */
+  /* --fui-color-border:#B2B2B2; */
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-list__item {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fui-text__explain {
+  font-size: 28rpx;
+  color: #7F7F7F;
+  flex-shrink: 0;
+}
+
+.fui-list__icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 24rpx;
+}

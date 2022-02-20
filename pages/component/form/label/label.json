@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "标签",
+  "usingComponents": {
+    "fui-radio-group": "/components/firstui/fui-radio-group/fui-radio-group",
+    "fui-radio": "/components/firstui/fui-radio/fui-radio",
+    "fui-label": "/components/firstui/fui-label/fui-label",
+    "fui-checkbox-group": "/components/firstui/fui-checkbox-group/fui-checkbox-group",
+    "fui-checkbox": "/components/firstui/fui-checkbox/fui-checkbox",
+    "fui-switch": "/components/firstui/fui-switch/fui-switch"
+  }
+}

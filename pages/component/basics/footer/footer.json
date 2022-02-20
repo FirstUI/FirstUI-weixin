@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "页脚",
+  "usingComponents": {
+    "fui-footer":"/components/firstui/fui-footer/fui-footer"
+  }
+}

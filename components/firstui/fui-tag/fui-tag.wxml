@@ -1,0 +1,10 @@
+<view class="fui-tag__wrap {{highlight?'fui-tag__opacity':''}} {{!background?('fui-tag__'+type+'-'+theme):''}}" style="background:{{background}};font-size:{{size}}rpx;line-height:{{size}}rpx;color:{{color}};border-color:{{borderColor}};zoom:scaleRatio;border-radius:{{radius}}rpx;padding:{{padding}};margin:{{margin}}" bindtap="handleClick">
+  <text wx:if="{{text}}" class="fui-tag__text {{!background?('fui-tag_'+type+'-'+theme):''}}" style="font-size:{{size}}rpx;line-height:{{size}}rpx;color:{{color}}">{{text}}</text>
+  <slot></slot>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+
+  }
+</wxs>

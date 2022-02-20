@@ -1,0 +1,15 @@
+<view class="fui-list__wrap" style="margin-top:{{marginTop}}rpx">
+  <view class="fui-list__title" style="padding:{{padding}};background:{{background}}" wx:if="{{title}}">
+    <text style="color:{{color}};font-size:{{size}}rpx">{{title}}</text>
+  </view>
+  <view class="fui-list__container">
+    <view wx:if="{{topBorder}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx"
+      class="fui-list__border-top {{borderColor?'':'fui-list__border-color'}}"></view>
+    <slot></slot>
+    <view wx:if="{{bottomBorder}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx"
+      class="fui-list__border-bottom {{borderColor?'':'fui-list__border-color'}}"></view>
+  </view>
+  <view class="fui-list__footer" style="{padding:footerPadding}" wx:if="{{footer}}">
+    <text style="color:{{footerColor}};font-size:{{footerSize}}rpx">{{footer}}</text>
+  </view>
+</view>

@@ -1,0 +1,103 @@
+.fui-button__wrap {
+  position: relative;
+}
+
+.fui-button {
+  border-width: 1rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-style: solid;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.fui-button__flex-1 {
+  flex: 1;
+  width: 100%;
+}
+
+.fui-button::after {
+  border: 0;
+}
+
+.fui-button__active {
+  overflow: hidden !important;
+}
+
+.fui-button__active::after {
+  content: ' ';
+  background-color: var(--fui-bg-color-hover, rgba(0, 0, 0, 0.2));
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: none;
+  z-index: 1;
+  border-radius: 0;
+}
+.fui-button__text {
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center !important;
+  padding-left: 0 !important;
+
+}
+
+.fui-button__opacity {
+  opacity: 0.5;
+}
+
+.fui-text__bold {
+  font-weight: bold;
+}
+
+.fui-button__link {
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.fui-button__primary {
+  border-color: var(--fui-color-primary, #465CFF) !important;
+  background: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-button__success {
+  border-color: var(--fui-color-success, #09BE4F) !important;
+  background: var(--fui-color-success, #09BE4F) !important;
+}
+
+.fui-button__warning {
+  border-color: var(--fui-color-warning, #FFB703) !important;
+  background: var(--fui-color-warning, #FFB703) !important;
+}
+
+.fui-button__danger {
+  border-color: var(--fui-color-danger, #FF2B2B) !important;
+  background: var(--fui-color-danger, #FF2B2B) !important;
+}
+
+.fui-button__purple {
+  border-color: var(--fui-color-purple, #6831FF) !important;
+  background: var(--fui-color-purple, #6831FF) !important;
+}
+
+.fui-button__gray {
+  border-color: var(--fui-bg-color-content, #F8F8F8) !important;
+  background: var(--fui-bg-color-content, #F8F8F8) !important;
+  color: var(--fui-color-primary, #465CFF) !important;
+}
+
+.fui-btn__gray-color {
+  color: var(--fui-color-primary, #465CFF) !important;
+}

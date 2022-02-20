@@ -1,0 +1,28 @@
+page {
+  font-weight: normal;
+}
+
+.fui-wrap {
+  padding-bottom: 64rpx;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-menu__box {
+  width: 160rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fui-menu__btn {
+  width: 88rpx;
+  height: 88rpx;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

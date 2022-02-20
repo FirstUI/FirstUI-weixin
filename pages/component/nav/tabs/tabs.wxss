@@ -1,0 +1,7 @@
+.fui-wrap {
+  padding-bottom: 64rpx;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}

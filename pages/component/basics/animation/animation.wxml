@@ -1,0 +1,30 @@
+<view class="fui-wrap">
+  <view class="fui-page__hd">
+    <view class="fui-page__title">Animation</view>
+    <view class="fui-page__desc">Animation 动画，过渡效果。</view>
+  </view>
+  <view class="fui-page__bd fui-page__spacing">
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Fade" bold margin="24rpx 0"
+      bindclick="ani" data-type="1"></fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Slide Top" bold bindclick="ani" data-type="2">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Slide Left" bold margin="24rpx 0"
+      bindclick="ani" data-type="3">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Slide Right" bold bindclick="ani" data-type="4">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Slide Bottom" bold margin="24rpx 0"
+      bindclick="ani" data-type="5">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Zoom In" bold bindclick="ani" data-type="6">
+    </fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Zoom Out" bold margin="24rpx 0"
+      bindclick="ani" data-type="7"></fui-button>
+    <fui-button type="gray" width="400rpx" height="84rpx" text="Custom" bold
+      bindclick="ani" data-type="8"></fui-button>
+  </view>
+  <fui-animation duration="{{500}}" animationType="{{mode}}" styles="{{styles}}" show="{{show}}" bindclick="handleClick"
+    bindchange="change">
+    <view class="fui-ani__box fui-flex__center">transition</view>
+  </fui-animation>
+</view>
