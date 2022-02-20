@@ -3,19 +3,8 @@
 使用 First UI 前，请确保你已经学习并熟练使用过 [微信小程序](https://developers.weixin.qq.com/miniprogram/dev/framework/) 。
 
 
-<a  target="_blank">
-  <img alt="star this repo" src="https://img.shields.io/github/stars/FirstUI/FirstUI" />
-</a>
- <a  target="_blank">
-   <img alt="fork this repo" src="https://img.shields.io/github/forks/FirstUI/FirstUI" />
- </a>
-
  <a target="_blank">
 	<img alt="npm" src="https://img.shields.io/npm/v/firstui-uni.svg" />
-  </a>
-
-  <a target="_blank">
-	<img alt="license" src="https://img.shields.io/npm/l/firstui-uni.svg" />
  </a>
 
 
