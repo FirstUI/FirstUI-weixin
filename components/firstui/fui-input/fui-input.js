@@ -131,6 +131,10 @@ Component({
       type: Boolean,
       value: false
     },
+    alwaysEmbed: {
+      type: Boolean,
+      value: false
+    },
     //输入框字体大小 rpx
     size: {
       type: Number,
