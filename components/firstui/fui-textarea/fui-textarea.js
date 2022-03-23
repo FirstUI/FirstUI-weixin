@@ -283,7 +283,7 @@ Component({
     onInput(event) {
       let value = event.detail.value;
       if (this.data.trim) value = this.trimStr(value);
-      const len = value.length;
+      let len = value.length;
       const max = Number(this.data.maxlength)
       if (len > max) {
         len = max;
