@@ -12,3 +12,6 @@
 .fui-icon__color {
   color: var(--fui-color-section, #333333) !important;
 }
+.fui-icon__active-color {
+  color: var(--fui-color-primary, #465CFF) !important;
+}

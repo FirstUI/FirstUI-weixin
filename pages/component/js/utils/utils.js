@@ -4,7 +4,7 @@ Page({
     const text = 'english';
     const val = utils.titleCase(text);
     console.log(val);
-    wx.fui.toast(val)
+    wx.fui.toast(val) 
   },
   compressLetter() {
     const text = 'aabbbcddddddddd';

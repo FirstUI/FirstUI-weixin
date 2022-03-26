@@ -34,6 +34,11 @@ Component({
       type: Number,
       optionalTypes: [String],
       value: 0
+    },
+    //是否显示为主色调，color为空时有效。【内部使用】
+    primary: {
+      type: Boolean,
+      value: false
     }
   },
   data: {

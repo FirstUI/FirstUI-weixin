@@ -27,7 +27,7 @@
         "form/switch/switch",
         "form/textarea/textarea",
         "operate/actionsheet/actionsheet",
-        "operate/toast/toast",
+        "operate/toast/toast", 
         "operate/backdrop/backdrop",
         "operate/dialog/dialog",
         "operate/dropdownMenu/dropdownMenu",

@@ -5,16 +5,14 @@ const fui = {
 			icon: 'none',
 			duration: 2000
 		})
-	},
+	}, 
 	modal: function(title, content, callback, showCancel, confirmColor, confirmText) {
 		wx.showModal({
 			title: title,
 			content: content,
 			showCancel: showCancel || false,
-			// #ifndef MP-TOUTIAO
 			cancelColor: "#7F7F7F",
 			confirmColor: confirmColor || "#465CFF",
-			// #endif
 			confirmText: confirmText || "确定",
 			success(res) {
 				if (res.confirm) {
