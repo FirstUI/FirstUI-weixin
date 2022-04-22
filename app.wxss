@@ -23,7 +23,7 @@ page {
 	text-align: left;
 	font-size: 36rpx;
 	font-weight: 600;
-}
+} 
 
 .fui-page__desc {
 	margin-top: 8rpx;

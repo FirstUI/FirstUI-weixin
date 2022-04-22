@@ -1,4 +1,4 @@
-Component({
+Component({ 
   properties: {
     //是否显示操作菜单
     show: {

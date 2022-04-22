@@ -50,7 +50,7 @@
         "data/empty/empty",
         "js/utils/utils"
       ]
-    }
+    } 
   ],
   "usingComponents": {
     "fui-list-cell": "components/firstui/fui-list-cell/fui-list-cell",
