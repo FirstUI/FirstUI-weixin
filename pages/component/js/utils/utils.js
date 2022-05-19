@@ -1,5 +1,15 @@
 import utils from '../../../../components/firstui/fui-utils/index';
 Page({
+  data:{
+    num:0
+  },
+  onLoad(){
+    this.throttle = utils.throttle(() => {
+       this.setData({
+         num: this.data.num + 1
+       })
+    }, 3000)
+  },
   titleCase() {
     const text = 'english';
     const val = utils.titleCase(text);
@@ -45,5 +55,8 @@ Page({
     const val = utils.moneyFormatter(text);
     console.log(val);
     wx.fui.toast(val)
+  },
+  btnThrottle() {
+    this.throttle()
   }
 })

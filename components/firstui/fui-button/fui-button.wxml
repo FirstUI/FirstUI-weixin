@@ -5,7 +5,7 @@
     style="width: {{width}};height: {{height}};line-height: {{height}};background: {{disabled && disabledBackground ? disabledBackground : (plain ? 'transparent' : background)}};border-width:{{borderWidth}};border-color: {{borderColor ? borderColor : disabled && disabledBackground ? disabledBackground : (background || 'transparent')}};border-radius: {{radius}};font-size: {{size}}rpx;color: {{disabled && disabledBackground ? disabledColor : color}}"
     loading="{{loading}}" form-type="{{formType}}" open-type="{{openType}}" bindgetuserinfo="bindgetuserinfo"
     bindgetphonenumber="bindgetphonenumber" bindcontact="bindcontact" binderror="binderror"
-    bindopensetting="bindopensetting" disabled="{{disabled}}">
+    bindopensetting="bindopensetting" disabled="{{disabled}}" catchtap="handleTap">
     <text
       class="fui-button__text {{!background && !disabledBackground && !plain && type==='gray' && color==='#fff'?'fui-btn__gray-color':''}} {{bold?'fui-text__bold':''}}"
       wx:if="{{text}}"

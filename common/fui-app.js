@@ -11,10 +11,8 @@ const fui = {
 			title: title,
 			content: content,
 			showCancel: showCancel || false,
-			// #ifndef MP-TOUTIAO
 			cancelColor: "#7F7F7F",
 			confirmColor: confirmColor || "#465CFF",
-			// #endif
 			confirmText: confirmText || "确定",
 			success(res) {
 				if (res.confirm) {
@@ -33,7 +31,7 @@ const fui = {
 			wx.switchTab({
 				url: url
 			})
-		} else {
+		} else { 
 			wx.navigateTo({
 				url: url
 			});

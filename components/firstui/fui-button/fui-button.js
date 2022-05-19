@@ -112,13 +112,9 @@ Component({
     },
     handleClick() {
       if (this.data.disabled || !this.data.trigger) return;
-      //如果想取消操作，比如长按再放开，这里可以做时间判断
       this.setData({
         time: 0
       })
-      this.triggerEvent('click', {
-        index: Number(this.data.index)
-      });
     },
     handleEnd() {
       if (this.data.disabled) return;
@@ -127,6 +123,12 @@ Component({
           time: 0
         })
       }, 150);
+    },
+    handleTap(){
+      if (this.disabled) return;
+      this.triggerEvent('click', {
+        index: Number(this.data.index)
+      });
     },
     bindgetuserinfo({
       detail = {}

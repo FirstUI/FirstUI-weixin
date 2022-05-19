@@ -4,7 +4,7 @@
     "ignore": [
       {
         "value": ".eslintrc.js",
-        "type": "file" 
+        "type": "file"
       }
     ],
     "include": []
@@ -46,7 +46,8 @@
     "minifyWXML": true,
     "showES6CompileOption": false,
     "useCompilerPlugins": false,
-    "useStaticServer": true
+    "useStaticServer": true,
+    "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.21.3",

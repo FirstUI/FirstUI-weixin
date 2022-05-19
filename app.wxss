@@ -110,7 +110,7 @@ page {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
+} 
 
 .fui-flex__between {
 	display: flex;

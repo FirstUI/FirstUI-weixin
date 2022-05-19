@@ -8,6 +8,11 @@ Component({
         this.getWidth()
       }
     },
+    max:{
+      type: String,
+      optionalTypes: [Number],
+      value: -1
+    },
     //类型：primary，success，warning，danger，purple，white
     type: {
       type: String,
@@ -67,7 +72,7 @@ Component({
   },
   data: {
     width: 0,
-    isReady: false
+    showValue: ''
   },
   lifetimes: {
     ready() {
@@ -76,8 +81,17 @@ Component({
   },
   methods: {
     getWidth() {
-      let width = this.data.dot ? '8px' : ((String(this.data.value).length * 16 + 20) + 'rpx')
+        let max = Number(this.data.max)
+				let val = Number(this.data.value)
+				let value = ''
+				if (val === NaN || max === -1) {
+					value = this.data.value
+				} else {
+					value = val > max ? `${max}+` : val
+				}
+      let width = this.data.dot ? '8px' : ((String(value).length * 16 + 20) + 'rpx')
       this.setData({
+        showValue:value,
         width: width
       })
     },
