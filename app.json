@@ -11,6 +11,7 @@
       "root": "pages/component",
       "pages": [
         "basics/color/color",
+        "basics/text/text",
         "basics/icon/icon",
         "basics/button/button",
         "basics/footer/footer",

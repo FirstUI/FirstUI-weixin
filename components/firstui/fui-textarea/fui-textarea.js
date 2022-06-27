@@ -82,10 +82,11 @@ Component({
       value: '',
       observer(val) {
         if (val != this.data.val) {
-          const len = this.getCount(val.length)
+          let newVal = this.getVal(val);
+          const len = this.getCount(String(newVal).length)
           this.setData({
             count: len,
-            val: val
+            val: newVal
           })
         }
       }
@@ -248,8 +249,8 @@ Component({
   },
   lifetimes: {
     attached: function () {
-      let val = this.data.value;
-      const len = this.getCount(val.length)
+      let val =this.getVal(this.data.value);
+      const len = this.getCount(String(val).length)
       this.setData({
         count: len,
         val: val
@@ -265,6 +266,9 @@ Component({
     }
   },
   methods: {
+    getVal(val) {
+      return !val && val !== 0 ? '' : val
+    },
     fieldPlaceholderStyle() {
       if (this.data.placeholderStyle) {
         this.setData({
@@ -278,14 +282,14 @@ Component({
     },
     getCount(len) {
       const max = Number(this.data.maxlength)
-      return len > max ? max : len
+      return len > max && max!==-1 ? max : len
     },
     onInput(event) {
       let value = event.detail.value;
       if (this.data.trim) value = this.trimStr(value);
       let len = value.length;
       const max = Number(this.data.maxlength)
-      if (len > max) {
+      if (len > max && max !== -1) {
         len = max;
         value = value.substring(0, max - 1)
       }

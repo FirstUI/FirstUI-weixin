@@ -33,7 +33,7 @@ Component({
     },
     borderWidth: {
       type: String,
-      value: '1rpx'
+      value: '1px'
     },
     borderColor: {
       type: String,

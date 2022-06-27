@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "文本",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "fui-text":"/components/firstui/fui-text/fui-text"
+  }
+}

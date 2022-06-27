@@ -1,6 +1,15 @@
 <view class="fui-loadmore__wrap {{'fui-loadmore__'+direction}}" style="height:{{height}}rpx">
-  <view class="fui-loadmore__icon {{!activeColor?'fui-loadmore__border-left':''}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx;border-left-color:{{activeColor}};border-right-color:{{iconColor}};border-top-color:{{iconColor}};border-bottom-color:{{iconColor}}" wx:if="{{!src}}">
+  <view class="fui-loadmore__icon {{!activeColor?'fui-loadmore__border-left':''}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx;border-left-color:{{activeColor}};border-right-color:{{iconColor}};border-top-color:{{iconColor}};border-bottom-color:{{iconColor}}" wx:if="{{!src && state==2}}">
   </view>
-  <image class="fui-loadmore__icon-ani" src="{{src}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx" wx:if="{{src}}"></image>
-  <text class="{{direction==='col'?'fui-loadmore__text':''}}" style="color:{{color}};font-size:{{size}}rpx;line-height:{{size}}rpx">{{text}}</text>
+  <image class="fui-loadmore__icon-ani" src="{{src}}" style="width:{{iconWidth}}rpx;height:{{iconWidth}}rpx" wx:if="{{src && state==2}}"></image>
+  <text class="{{direction==='col'?'fui-loadmore__text':''}}" style="color:{{color}};font-size:{{size}}rpx;line-height:{{size}}rpx">{{parse.getStateText(state,initText,text,noneText)}}</text>
 </view>
+
+<wxs module="parse">
+  module.exports = {
+    getStateText: function (state,initText,text,noneText) {
+      state = parseInt(state);
+      return [initText, text, noneText][state - 1];
+    }
+  }
+</wxs>

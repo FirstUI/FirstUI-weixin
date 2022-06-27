@@ -99,3 +99,6 @@
   padding-top: 8rpx;
   text-align: right;
 }
+.fui-text__right{
+  text-align: right;
+}
