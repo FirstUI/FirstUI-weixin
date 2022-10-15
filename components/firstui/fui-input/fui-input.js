@@ -95,6 +95,16 @@ Component({
       optionalTypes: [String],
       value: 140
     },
+    min:{
+      type: Number,
+      optionalTypes: [String],
+      value: 'NaN'
+    },
+    max: {
+      type: Number,
+      optionalTypes: [String],
+      value: 'NaN'
+    },
     cursorSpacing: {
       type: Number,
       value: 0,
@@ -258,7 +268,28 @@ Component({
     onInput(event) {
       let value = event.detail.value;
       if (this.data.trim) value = this.trimStr(value);
-      this.triggerEvent('input', value);
+      if (this.data.type === 'digit' || this.data.type === 'number') {
+        const eVal= Number(value)
+        value = this.data.type === 'digit' ? value : eVal
+        if (typeof eVal === 'number') {
+          const min = Number(this.data.min)
+          const max = Number(this.data.max)
+          if (typeof min === 'number' && eVal < min) {
+            value = min
+            this.setData({
+              value:value
+            })
+          } else if (typeof max === 'number' && max < eVal) {
+            value = max
+            this.setData({
+              value:value
+            })
+          }
+        }
+      }
+      //如果为空时返回0 ，当双向绑定会将输入框赋值0
+			const inputValue = event.detail.value !== '' ? value : ''
+      this.triggerEvent('input', inputValue);
     },
     onFocus(event) {
       this.triggerEvent('focus', event.detail);
@@ -270,6 +301,7 @@ Component({
       this.triggerEvent('confirm', e.detail);
     },
     onClear(event) {
+      if(this.data.disabled) return;
       wx.hideKeyboard()
       this.triggerEvent('input', '');
       this.setData({

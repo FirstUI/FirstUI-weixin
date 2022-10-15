@@ -4,7 +4,7 @@
     </view>
     <slot></slot>
   </view>
-  <input type="number" model:value="{{inputValue}}" disabled="{{disabled}}" bindblur="blur" class="fui-number__input" style="color: {{color}};font-size: {{size}}rpx;background-color: {{backgroundColor}};height:{{height}}rpx;min-height:{{height}}rpx;width:{{width}}rpx;border-radius:{{radius}}rpx;margin-left:{{margin}}rpx;margin-right:{{margin}}rpx" bindinput="bindinput"/>
+  <input type="{{type}}" model:value="{{inputValue}}" disabled="{{disabled}}" bindblur="blur" class="fui-number__input" style="color: {{color}};font-size: {{size}}rpx;background-color: {{backgroundColor}};height:{{height}}rpx;min-height:{{height}}rpx;width:{{width}}rpx;border-radius:{{radius}}rpx;margin-left:{{margin}}rpx;margin-right:{{margin}}rpx" bindinput="bindinput"/>
   <view class="fui-number__plus {{disabled || inputValue >= max ? 'fui-number__disabled' : ''}}" style="min-width:{{signWidth}}rpx;min-height:{{signWidth}}rpx" bindtap="plus">
     <view class="fui-plus__sign-col" style="height:{{signWidth}}rpx;background:{{signColor}};left:50%;" wx:if="{{!custom}}">
     </view>

@@ -40,7 +40,8 @@ Component({
     elemId: elemId,
     width: 0,
     height: 0,
-    children: []
+    children: [],
+    isShow: false
   },
   lifetimes: {
     attached:function(){
@@ -58,6 +59,9 @@ Component({
               width: width,
               height: height
             })
+          })
+          this.setData({
+            isShow: true
           })
         })
     },

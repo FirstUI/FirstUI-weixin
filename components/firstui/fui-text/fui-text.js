@@ -43,6 +43,11 @@ Component({
 				type: String,
 				value: 'none'
 			},
+			//是否将行高设置与字体大小一致
+			lineHeight: {
+				type: Boolean,
+				value: false
+			},
 			padding: {
 				type: String,
 				value:'0'

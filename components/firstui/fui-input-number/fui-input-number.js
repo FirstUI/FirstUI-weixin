@@ -15,6 +15,11 @@ Component({
         }
       }
     },
+     //number、text（主要用与输入负号）
+    type: {
+      type: String,
+      value: 'number'
+    },
     //最小值
     min: {
       type: Number,
@@ -103,20 +108,24 @@ Component({
     }
   },
   observers: {
-    'inputValue':function(newVal){
-      const val = this.getValue(+newVal)
-      this.triggerEvent("change", {
-        value: val, 
-        index: this.data.index,
-        params: this.data.params
-      });
-      this.setData({
-        value: val
-      })
+    'inputValue':function(newVal,oldVal){
+      if(!isNaN(Number(newVal)) && Number(newVal) !== Number(oldVal)){
+        const val = this.getValue(+newVal)
+        this.triggerEvent("change", {
+          value: val, 
+          index: this.data.index,
+          params: this.data.params
+        });
+        this.setData({
+          value: val,
+          oldValue:val
+        })
+      }
     }
   },
   data: {
-    inputValue: 0
+    inputValue: 0,
+    oldValue:0
   },
   lifetimes: {
     attached: function () {
@@ -127,24 +136,6 @@ Component({
   },
   methods: {
     bindinput(e){},
-    toFixed(num, s) {
-      let times = Math.pow(10, s)
-      let des = num * times + 0.5
-      des = parseInt(des, 10) / times
-      return Number(des + '')
-    },
-    getLen(val, step) {
-      let len = 0;
-      let lenVal = 0;
-      //浮点型
-      if (!Number.isInteger(step)) {
-        len = (step + '').split('.')[1].length
-      }
-      if (!Number.isInteger(val)) {
-        lenVal = (val + '').split('.')[1].length
-      }
-      return Math.max(len, lenVal);
-    },
     getScale(val, step) {
       let scale = 1;
       let scaleVal = 1;
@@ -170,7 +161,6 @@ Component({
       if (this.data.disabled || (this.data.inputValue == this.data.min && type === 'reduce') || (this.data.inputValue == this.data
           .max && type === 'plus')) return;
       const scale = this.getScale(Number(this.data.inputValue), Number(this.data.step));
-      const len = this.getLen(Number(this.data.inputValue), Number(this.data.step));
 
       let num = Number(this.data.inputValue) * scale;
       let step = this.data.step * scale;
@@ -179,7 +169,7 @@ Component({
       } else if (type === 'plus') {
         num += step;
       }
-      let value = this.toFixed(num / scale, len);
+      let value = Number((num / scale).toFixed(String(scale).length - 1));
       if (value < this.data.min) {
         value = this.data.min;
       } else if (value > this.data.max) {
@@ -196,19 +186,22 @@ Component({
       this.calcNum('reduce');
     },
     blur: function (e) {
-      this.triggerEvent('blur', e.detail)
       let value = e.detail.value;
-      if (value) {
+      if (value && !isNaN(Number(value))) {
         if (~value.indexOf('.') && Number.isInteger(this.data.step) && Number.isInteger(Number(value))) {
           value = value.split('.')[0];
         }
         value = this.getValue(value)
       } else {
-        value = this.data.min;
+        value = this.data.oldValue;
       }
-      this.setData({
-        inputValue: value
-      })
+      setTimeout(() => {
+        e.detail.value = value
+        this.triggerEvent('blur', e.detail)
+        this.setData({
+          inputValue: value
+        })
+      }, this.data.type === 'text' ? 100 : 0)
     }
   }
 })

@@ -4,6 +4,16 @@
   box-sizing: border-box;
   flex: 1;
   flex-direction: column;
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+.fui-grid__wrap-hidden {
+  opacity: 0;
+}
+
+.fui-grid__wrap-show {
+  opacity: 1;
 }
 
 .fui-grid {
