@@ -90,6 +90,10 @@ Component({
       type: Boolean,
       value: false
     },
+    readonly:{
+      type: Boolean,
+      value: false
+    },
     maxlength: {
       type: Number,
       optionalTypes: [String],
@@ -301,7 +305,7 @@ Component({
       this.triggerEvent('confirm', e.detail);
     },
     onClear(event) {
-      if(this.data.disabled) return;
+      if(this.data.disabled && !this.data.readonly) return;
       wx.hideKeyboard()
       this.triggerEvent('input', '');
       this.setData({

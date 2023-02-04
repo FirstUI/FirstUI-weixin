@@ -27,6 +27,12 @@ Component({
     maskBackground: {
       type: String,
       value: 'rgba(0,0,0,.6)'
+    },
+    //圆角值，左侧打开时为右侧圆角，右侧打开时为左侧圆角
+    radius: {
+      type: String,
+      optionalTypes:[Number],
+      value: 0
     }
   },
   methods: {

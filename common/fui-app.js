@@ -1,6 +1,6 @@
 const fui = { 
 	toast: function(text) {
-		text && wx.showToast({
+		text && wx.showToast({ 
 			title: text,
 			icon: 'none',
 			duration: 2000

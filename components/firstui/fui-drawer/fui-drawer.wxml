@@ -1,5 +1,5 @@
 <view class="fui-drawer__popup-wrap {{show?'fui-drawer__wrap-show':''}}" style="z-index: {{zIndex}};background:{{maskBackground}};align-items:{{direction==='left'?'flex-start':'flex-end'}}" catchtap="handleClose" catchtouchmove="stop">
-  <view class="fui-drawer__popup {{'fui-drawer_'+direction}} {{show?'fui-drawer__show':''}}" style="background:{{background}}" catchtap="stop">
+  <view class="fui-drawer__popup {{'fui-drawer_'+direction}} {{show?'fui-drawer__show':''}}" style="background:{{background}};border-top-left-radius: {{direction==='right'? radius:0}}rpx;border-bottom-left-radius: {{direction==='right'? radius:0}}rpx;border-top-right-radius: {{direction==='left'? radius:0}}rpx;border-bottom-right-radius: {{direction==='left'? radius:0}}rpx;" catchtap="stop">
     <slot></slot>
   </view>
 </view>

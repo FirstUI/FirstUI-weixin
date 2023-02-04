@@ -27,16 +27,7 @@ Component({
     //styles 组件样式，同 css 样式
     styles: {
       type: Object,
-      value: {
-        position: 'fixed',
-        bottom: 0,
-        top: 0,
-        left: 0,
-        right: 0,
-        display: 'flex',
-        'justify-content': 'center',
-        'align-items': 'center'
-      },
+      value: {},
       observer(val) {
         this.setData({
           stylesObject: this.getStylesObject()
@@ -62,8 +53,20 @@ Component({
   },
   methods: {
     getStylesObject() {
+      //默认值
+			const defStyles = {
+          position: 'fixed',
+          bottom: 0,
+          top: 0,
+          left: 0,
+          right: 0,
+          display: 'flex',
+          'justify-content': 'center',
+          'align-items': 'center'
+        };
+      const mergeStyles = Object.assign({}, defStyles, this.data.styles);
       let styles = {
-        ...this.data.styles,
+        ...mergeStyles,
         'transition-duration': this.data.duration / 1000 + 's'
       };
       let transfrom = '';

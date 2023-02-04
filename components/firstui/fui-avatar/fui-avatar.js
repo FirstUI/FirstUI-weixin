@@ -2,6 +2,17 @@ Component({
   properties: {
     src: {
       type: String,
+      value: '',
+      observer(val){
+        if(val){
+          this.setData({
+            showImg: val
+          })
+        }
+      }
+    },
+    errorSrc: {
+      type: String,
       value: ''
     },
     mode: {
@@ -93,7 +104,32 @@ Component({
       value: 0
     }
   },
+  data:{
+    showImg:''
+  },
+  lifetimes:{
+      attached:function(){
+        if(this.data.src){
+          this.setData({
+            showImg: this.data.src
+          })
+        }
+      }
+  },
   methods: {
+    handleError(e) {
+      if (this.data.src) {
+        if(this.data.errorSrc){
+          this.setData({
+            showImg: this.data.errorSrc
+          })
+        }
+        this.triggerEvent('error', {
+          index: this.data.index,
+          params: this.data.params
+        })
+      }
+    },
     handleClick() {
       this.triggerEvent('click', {
         index: this.data.index,

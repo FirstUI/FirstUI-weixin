@@ -2,16 +2,7 @@ Page({
   data: {
     show: false,
     mode: ['fade'],
-    styles: {
-      position: 'fixed',
-      bottom: 0,
-      top: 0,
-      left: 0,
-      right: 0,
-      display: 'flex',
-      'justify-content': 'center',
-      'align-items': 'center'
-    }
+    styles: {}
   },
   ani(e) {
     let type = Number(e.currentTarget.dataset.type)
