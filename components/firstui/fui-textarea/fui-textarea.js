@@ -200,6 +200,16 @@ Component({
       type: String,
       value: '#eaeef1'
     },
+    radius: {
+      type: String,
+      optionalTypes:[Number],
+      value: 0,
+      observer(val){
+        this.setData({
+          isRadius:val && val !== true && Number(val) > 0?true:false
+        })
+      }
+    },
     // 是否自动去除两端的空格
     trim: {
       type: Boolean,
@@ -245,7 +255,8 @@ Component({
     placeholderStyl: '',
     count: 0,
     focused: false,
-    val: ''
+    val: '',
+    isRadius: false
   },
   lifetimes: {
     attached: function () {
@@ -258,6 +269,11 @@ Component({
       this.fieldPlaceholderStyle()
     },
     ready: function () {
+      if (this.data.radius && this.data.radius !== true && Number(this.data.radius) > 0) {
+        this.setData({
+          isRadius:true
+        })
+			}
       setTimeout(() => {
         this.setData({
           focused: this.data.focus

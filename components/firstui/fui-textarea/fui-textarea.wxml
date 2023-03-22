@@ -1,6 +1,6 @@
-<view class="{{textareaBorder?'fui-textarea__border':''}}" style="margin-top:{{marginTop}}rpx;border-color:{{borderColor}}" bindtap="fieldClick">
-  <view class="fui-textarea__wrap {{flexStart?'fui-textarea__flex-start':''}}" style="padding:{{padding}};background-color:{{backgroundColor}}">
-    <view wx:if="{{borderTop && !textareaBorder}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx" class="fui-textarea__border-top">
+<view class="{{textareaBorder && !isRadius?'fui-textarea__border':''}}" style="margin-top:{{marginTop}}rpx;border-color:{{borderColor}}" bindtap="fieldClick">
+  <view class="fui-textarea__wrap {{flexStart?'fui-textarea__flex-start':''}}" style="padding:{{padding}};background-color:{{backgroundColor}};border-radius: {{radius}}rpx;">
+    <view wx:if="{{borderTop && !textareaBorder && !isRadius}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx" class="fui-textarea__border-top">
     </view>
     <view class="fui-textarea__required {{flexStart?'fui-required__flex-start':''}}" style="color:{{requiredColor}};top:{{flexStart?requiredTop:'50%'}}" wx:if="{{required}}">*</view>
     <view class="fui-textarea__label" style="min-width:{{labelWidth}}rpx" wx:if="{{label}}">
@@ -14,6 +14,6 @@
       </view>
     </view>
     <slot></slot>
-    <view wx:if="{{borderBottom  && !textareaBorder}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx" class="fui-textarea__border-bottom"></view>
+    <view wx:if="{{borderBottom  && !textareaBorder && !isRadius}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx" class="fui-textarea__border-bottom"></view>
   </view>
 </view>

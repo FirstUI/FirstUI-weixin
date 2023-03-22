@@ -111,10 +111,21 @@
   z-index: 10;
 }
 
-.fui-tabs__ac-line {
+.fui-tabs__line-wrap {
   position: absolute;
   border-radius: 2px;
   z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.fui-tabs__line-center {
+  justify-content: center;
+  left: 0;
+}
+
+.fui-tabs__ac-line {
   transition: transform 0.2s linear;
 }
 

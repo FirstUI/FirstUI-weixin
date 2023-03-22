@@ -1,7 +1,7 @@
 import tabs from './tabs.js';
 Page({
   data: {
-    tabs: tabs,
+    tabs: tabs, 
     scrollInto: '',
     tabIndex: 0,
     height: 0,

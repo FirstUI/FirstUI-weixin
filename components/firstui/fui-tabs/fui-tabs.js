@@ -118,6 +118,11 @@ Component({
       type: Boolean,
       value: true
     },
+    //滑块是否居中显示
+    center: {
+      type: Boolean,
+      value: false
+    },
     //是否固定
     isFixed: {
       type: Boolean,
