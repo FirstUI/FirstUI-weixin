@@ -7,7 +7,7 @@
         "type": "file"
       }
     ],
-    "include": [] 
+    "include": []
   },
   "setting": {
     "urlCheck": true,

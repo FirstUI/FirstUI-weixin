@@ -2,9 +2,13 @@ var MIN_DISTANCE = 10
 
 function getDom(ins, ownerInstance) {
 	var state = ins.getState()
-	var rightDom = ownerInstance.selectComponent('.fui-swipe__action-right')
-	var rightStyles = rightDom.getBoundingClientRect()
-	state.rightWidth = rightStyles.width || 0
+  var rightDom = ownerInstance.selectComponent('.fui-swipe__action-right')
+  if(rightDom){
+    var rightStyles = rightDom.getBoundingClientRect()
+    state.rightWidth = rightStyles.width || 0
+  }else{
+    state.rightWidth = 0
+  }
 }
 
 function getDirection(x, y) {
