@@ -65,6 +65,9 @@ Component({
           index: this.data.index
         })
       }
+      this.triggerEvent('click', {
+        index: this.data.index
+      })
     }
   }
 })

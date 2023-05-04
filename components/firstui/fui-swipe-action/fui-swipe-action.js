@@ -105,7 +105,7 @@ Component({
     },
     closeSwipe(e) {
       if (!this.data.autoClose) return
-      this.data.group.closeAuto(this)
+      this.data.group && this.data.group.closeAuto(this)
     },
     change(e) {
       this.triggerEvent('change', {

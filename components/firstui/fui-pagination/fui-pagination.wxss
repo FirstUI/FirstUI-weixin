@@ -37,10 +37,38 @@
 .fui-pagination__active-color {
   color: var(--fui-color-primary, #465CFF) !important;
 }
+.fui-pagination__bg {
+  background: var(--fui-color-primary, #465CFF) !important;
+}
 .fui-pagination__color{
   color: var(--fui-color-section, #333) !important;
 }
 
 .fui-pagination__disabled {
   opacity: 0.3;
+}
+.fui-page__number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.fui-page__num-item {
+  min-width: 60rpx;
+  display: flex;
+  transform: translateZ(0);
+  height: 60rpx;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4rpx;
+}
+
+.fui-page__num-item:active {
+  opacity: .5;
+}
+
+.fui-page__num-text {
+  font-size: 24rpx;
 }

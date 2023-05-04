@@ -83,6 +83,49 @@ First UI分为 `开源版` 和 `商业版`，所有示例或文档中加 V 的�
 
 ### 更新日志
 
+#### V1.9.5（2023-05-05）
+
+- 新增 Link 超链接 组件。
+
+- 新增 Lottie 动画组件。
+
+- Upload 图片上传 组件优化，新增属性设置边框，圆角值，加号字体大小等。
+
+- UploadVideo 视频上传 组件优化，新增属性设置边框，圆角值，加号字体大小等。
+
+- Text 文本 组件优化，新增 unShrink 属性，设置flex布局下取消收缩。
+
+- DataTag 标签选择组件优化，新增属性设置默认边框颜色。
+
+- Pagination 分页器 组件优化，新增页码展示类型。
+
+- SwipeAction 滑动菜单 组件优化，修复已知问题。
+
+- Circle 圆形进度条 组件优化，支持设置渐变色。
+
+- SearchBar 搜索栏 组件优化，新增reset方法，设置组件回到初始化状态。
+
+- Picker 选择器 组件优化，操作过快可能导致返回值更新不正确的问题。
+
+- Picker 选择器 组件优化，新增 isClose 属性设置点击确认按钮后是否立即关闭选择弹框，设置为false需要自行关闭（bindchange事件中需要对选择值做校验时可使用）。
+
+- DatePicker 日期时间选择器 组件优化，新增 isClose 属性设置点击确认按钮后是否立即关闭选择弹框，设置为false需要自行关闭（bindchange事件中需要对选择值做校验时可使用）。
+
+- Select 选择器 组件优化，属性（props） options 新增 disabled 属性控制是否禁用选择。
+
+- Barcode 条形码 页面示例优化，调整输入框值判断出错的问题（输入框type=number时返回的是Number类型值）。
+
+- Button 按钮 组件优化，新增小程序端部分事件，具体查看文档介绍。
+
+- Select 选择器 组件优化，item项图片新增属性设置背景色和裁剪、缩放方式。
+
+- Grid 宫格 组件优化，item项（fui-grid-item）新增click事件，原fui-grid组件事件不变。
+
+- DatePicker 日期时间选择器 组件优化，修复设置 最小值（minDate）和 最大值（maxDate）显示不正确的问题。
+
+- BubbleBox 气泡框 组件优化，position 值为 absolute 时，支持设置left（right）、top（bottom）值，且right属性默认值改为0。
+
+
 #### V1.9.0（2023-03-22）
 
 - 新增 聊天模板 A，项目包含验证码登录、注册、选择国家或地区、输入验证码、聊天列表、聊天、联系人、个人中心、个人信息、通知等页面（物料）。

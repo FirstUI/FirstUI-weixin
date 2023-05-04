@@ -5,3 +5,8 @@ page {
   padding: 0 120rpx;
   box-sizing: border-box;
 }
+.fui-pageno__wrap {
+  width: 100%;
+  padding: 0 64rpx;
+  box-sizing: border-box;
+}

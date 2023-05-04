@@ -88,6 +88,10 @@ Component({
       type: String,
       value: ''
     },
+    appParameter: {
+      type: String,
+      value: ''
+    },
     index: {
       type: Number,
       optionalTypes: [String],
@@ -154,6 +158,16 @@ Component({
       detail = {}
     } = {}) {
       this.triggerEvent('opensetting', detail);
+    },
+    bindchooseavatar({
+      detail = {}
+    } = {}) {
+      this.triggerEvent('chooseavatar', detail);
+    },
+    bindlaunchapp({
+      detail = {}
+    } = {}) {
+      this.triggerEvent('launchapp', detail);
     }
   }
 })

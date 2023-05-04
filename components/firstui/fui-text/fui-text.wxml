@@ -1,6 +1,6 @@
 <view class="fui-text__wrap {{block?'fui-text__block':'fui-text__inline'}} {{'fui-text__'+align}} {{highlight && !disable?'fui-text__active':''}}" style="text-align:{{align}};padding:{{padding}}"	bindtap="handleTap">
 		<slot></slot>
-		<text class="fui-text__content {{color?'':'fui-text__'+type}}"
+		<text class="fui-text__content {{color?'':'fui-text__'+type}} {{unShrink?'fui-text__unshrink':''}}"
 			style="color:{{color}};font-size:{{size+unit}};line-height: {{lineHeight?(size+unit):'auto'}};text-align:{{align}};text-decoration:{{decoration}};font-weight:{{fontWeight}}" userSelect="{{userSelect}}" decode="{{decode}}">{{textValue}}</text>
 		<slot name="right"></slot>
 	</view>

@@ -89,6 +89,10 @@ Component({
 				type: Boolean,
 				value: false
 			},
+			unShrink: {
+				type: Boolean,
+				value: false
+			},
 			param: {
         type: String,
         optionalTypes:[Number],

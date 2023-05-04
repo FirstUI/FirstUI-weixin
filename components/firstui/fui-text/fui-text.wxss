@@ -14,7 +14,9 @@
 .fui-text__block {
   display: flex;
 }
-
+.fui-text__unshrink {
+  flex-shrink: 0;
+}
 
 .fui-text__center {
   justify-content: center;
