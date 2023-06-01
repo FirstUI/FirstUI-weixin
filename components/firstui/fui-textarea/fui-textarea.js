@@ -13,7 +13,7 @@ Component({
     },
     requiredColor: {
       type: String,
-      value: '#FF2B2B'
+      value: ''
     },
     requiredTop: {
       type: String,
@@ -195,10 +195,10 @@ Component({
       optionalTypes: [String],
       value: 0
     },
-    //边框颜色，inputBorder为true时，非nvue端边框颜色通过css变量修改
+    //边框颜色，默认边框颜色可通过css变量修改
     borderColor: {
       type: String,
-      value: '#eaeef1'
+      value: ''
     },
     radius: {
       type: String,
@@ -256,7 +256,8 @@ Component({
     count: 0,
     focused: false,
     val: '',
-    isRadius: false
+    isRadius: false,
+    c_dangerColor:(wx.$fui && wx.$fui.color.danger) || '#FF2B2B'
   },
   lifetimes: {
     attached: function () {

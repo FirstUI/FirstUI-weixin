@@ -17,12 +17,12 @@ Component({
 			size: {
         type: String,
         optionalTypes:[Number],
-				value: 32
+				value: 0
 			},
 			//rpx | px
 			unit: {
 				type: String,
-				value: 'rpx'
+				value: ''
 			},
 			color: {
 				type: String,
@@ -100,7 +100,9 @@ Component({
 			}
   },
   data: {
-     textValue:''
+     textValue:'',
+     c_size: (wx.$fui && wx.$fui.fuiText.size) || 32,
+     c_unit: (wx.$fui && wx.$fui.fuiText.unit) || 'rpx',
   },
   observers:{
      'text,textType,format':function(){

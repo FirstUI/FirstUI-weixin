@@ -27,7 +27,6 @@
 // # GitHub
 git clone https://github.com/FirstUI/FirstUI-weixin.git
 
-// 注：会员代码请从官网个人中心订单处下载！
 ```
 
 #### 方式三 ：选择需要的模块引入
@@ -68,8 +67,6 @@ git clone https://github.com/FirstUI/FirstUI-weixin.git
 ```
 
 ### 相关链接
-
-`注：会员文档请从官网个人中心左侧菜单进入！`
 
 官网地址：[https://www.firstui.cn](https://www.firstui.cn)
 

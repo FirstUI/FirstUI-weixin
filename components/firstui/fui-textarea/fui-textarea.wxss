@@ -71,11 +71,6 @@
 .fui-textarea__border {
   border-radius: 4rpx;
   position: relative;
-  border-width: 0;
-}
-
-.fui-textarea__border::after {
-  content: ' ';
   position: absolute;
   height: 200%;
   width: 200%;
@@ -90,6 +85,15 @@
   -webkit-user-select: none;
   user-select: none;
 }
+
+.fui-textarea__bordercolor{
+  border-color:var(--fui-color-border, #EEEEEE) !important;
+}
+
+.fui-textarea__background{
+  background: var(--fui-color-border, #EEEEEE) !important;
+}
+
 
 .fui-textarea__flex-1 {
   flex: 1;

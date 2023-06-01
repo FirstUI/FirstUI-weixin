@@ -13,7 +13,7 @@ Component({
     },
     requiredColor: {
       type: String,
-      value: '#FF2B2B'
+      value: ''
     },
     //左侧标题
     label: {
@@ -24,11 +24,11 @@ Component({
     labelSize: {
       type: Number,
       optionalTypes: [String],
-      value: 32
+      value: 0
     },
     labelColor: {
       type: String,
-      value: '#333'
+      value: ''
     },
     //label 最小宽度 rpx
     labelWidth: {
@@ -153,12 +153,12 @@ Component({
     size: {
       type: Number,
       optionalTypes: [String],
-      value: 32
+      value: 0
     },
     //输入框字体颜色
     color: {
       type: String,
-      value: '#333'
+      value: ''
     },
     // 是否显示 input 边框，为true则borderTop，borderBottom失效
     inputBorder: {
@@ -170,11 +170,11 @@ Component({
       type: Boolean,
       value: false
     },
-    //自定义圆角值，无边框时生效
+    //自定义圆角值
     radius: {
       type: Number,
       optionalTypes: [String],
-      value: -1
+      value: 8
     },
     // 是否显示上边框
     borderTop: {
@@ -210,10 +210,10 @@ Component({
       optionalTypes: [String],
       value: 0
     },
-    //边框颜色，inputBorder为true时，非nvue端边框颜色通过css变量修改
+    //边框颜色，颜色可通过css变量(--fui-color-border)修改
     borderColor: {
       type: String,
-      value: '#EEEEEE'
+      value: ''
     },
     // 是否自动去除两端的空格
     trim: {
@@ -243,7 +243,12 @@ Component({
   },
   data: {
     placeholderStyl: '',
-    focused: false
+    focused: false,
+    c_labelSize:(wx.$fui && wx.$fui.fuiInput.labelSize) || 32,
+    c_size: (wx.$fui && wx.$fui.fuiInput.size) || 32,
+    c_labelColor:(wx.$fui && wx.$fui.fuiInput.labelColor) || '#333',
+    c_color: (wx.$fui && wx.$fui.fuiInput.color) || '#333',
+    c_dangerColor:(wx.$fui && wx.$fui.color.danger) || '#FF2B2B'
   },
   lifetimes: {
     attached: function () {
@@ -265,7 +270,7 @@ Component({
         })
       } else {
         this.setData({
-          placeholderStyl: `font-size:${this.data.size}rpx`
+          placeholderStyl: `font-size:${this.data.size || this.data.c_size}rpx`
         })
       }
     },

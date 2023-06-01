@@ -11,12 +11,12 @@ Component({
     size: {
       type: Number,
       optionalTypes: [String],
-      value: 64
+      value: 0
     },
     //rpx | px
     unit: {
       type: String,
-      value: 'rpx'
+      value: ''
     },
     color: {
       type: String,
@@ -49,7 +49,9 @@ Component({
     }
   },
   data: {
-    icons: icons
+    icons: icons,
+    c_size: (wx.$fui && wx.$fui.fuiIcon.size) || 64,
+    c_unit: (wx.$fui && wx.$fui.fuiIcon.unit) || 'rpx'
   },
   methods: {
     handleClick() {

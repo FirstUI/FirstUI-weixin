@@ -10,12 +10,17 @@
     <view class="fui-section__title">带标题</view>
     <fui-input label="标题" borderTop placeholder="这是一个输入框"></fui-input>
     <fui-input label="标题文字" bottomLeft="{{0}}" placeholder="请输入文本"></fui-input>
+    <view class="fui-section__title">密码框</view>
+			<fui-input borderTop :padding="['20rpx','32rpx']" placeholder="请输入密码" password="{{password}}" bindinput="input">
+				<fui-icon name="{{password?'invisible':'visible'}}" color="#B2B2B2" size="{{50}}" bindclick="change"></fui-icon>
+			</fui-input>
     <view class="fui-section__title">带清除按钮、双向绑定</view>
     <fui-input label="标题" bottomLeft="{{0}}" borderTop placeholder="请输入文本" clearable model:value="{{text}}"></fui-input>
     <view class="fui-section__title">显示边框</view>
     <view class="fui-page__spacing">
       <fui-input label="标题" inputBorder placeholder="请输入文本"></fui-input>
       <fui-input marginTop="{{24}}" isFillet inputBorder placeholder="请输入文本"></fui-input>
+      <fui-input marginTop="24" radius="24" border-color="#FFB703" inputBorder placeholder="请输入文本"></fui-input>
     </view>
     <view class="fui-section__title">必填项</view>
     <fui-input required label="标题" borderTop placeholder="请输入文本"></fui-input>

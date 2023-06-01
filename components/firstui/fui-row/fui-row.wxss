@@ -12,7 +12,10 @@
   position: relative;
 }
 
-.fui-row__box::before,
+.fui-row__box::before{
+  display: table;
+  content: " ";
+}
 .fui-row__box::after {
   display: table;
   content: " ";

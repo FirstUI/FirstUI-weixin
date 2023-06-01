@@ -1,26 +1,25 @@
-<view class="fui-button__wrap" style="width: {{width}};height: {{height}};margin:{{margin}};border-radius:{{radius}}"
-  bindtouchstart="handleStart" bindtouchend="handleClick" bindtouchcancel="handleEnd">
+<view class="fui-button__wrap {{(!width || width==='100%' || width===true) && !btnSize?'fui-button__flex-1':''}}" style="width: {{parse.getWidth(width,btnSize)}};height: {{parse.getHeight(height,btnSize,c_height)}};margin:{{margin}};border-radius:{{radius}}" bindtouchstart="handleStart" bindtouchend="handleClick" bindtouchcancel="handleEnd">
   <button
-    class="fui-button {{bold ? 'fui-text__bold' : ''}} {{	time && (plain || type==='link') ? 'fui-button__opacity' : ''}} {{disabled && !disabledBackground ? 'fui-button__opacity' : ''}} {{!background && !disabledBackground && !plain?('fui-button__'+type):''}} {{!width || width==='100%' || width==='true'?'fui-button__flex-1':''}} {{time && !plain && type!=='link' ? 'fui-button__active' : ''}}"
-    style="width: {{width}};height: {{height}};line-height: {{height}};background: {{disabled && disabledBackground ? disabledBackground : (plain ? 'transparent' : background)}};border-radius: {{radius}};font-size: {{size}}rpx;color: {{disabled && disabledBackground ? disabledColor : color}}"
+    class="fui-button {{bold ? 'fui-text__bold' : ''}} {{	time && (plain || type==='link') ? 'fui-button__opacity' : ''}} {{disabled && !disabledBackground ? 'fui-button__opacity' : ''}} {{!background && !disabledBackground && !plain?('fui-button__'+type):''}} {{(!width || width==='100%' || width===true) && !btnSize?'fui-button__flex-1':''}} {{time && !plain && type!=='link' ? 'fui-button__active' : ''}}"
+    style="width: {{parse.getWidth(width,btnSize)}};height: {{parse.getHeight(height,btnSize,c_height)}};line-height: {{parse.getHeight(height,btnSize,c_height)}};background: {{disabled && disabledBackground ? disabledBackground : (plain ? 'transparent' : background)}};border-radius: {{radius}};font-size: {{parse.getSize(size,btnSize,c_size)}}rpx;color: {{disabled && disabledBackground ? disabledColor : color}}"
     loading="{{loading}}" form-type="{{formType}}" app-parameter="{{appParameter}}" open-type="{{openType}}" bindgetuserinfo="bindgetuserinfo"
     bindgetphonenumber="bindgetphonenumber" bindcontact="bindcontact" binderror="binderror"
     bindopensetting="bindopensetting"  bindchooseavatar="bindchooseavatar" bindlaunchapp="bindlaunchapp" disabled="{{disabled}}" catchtap="handleTap">
     <text
       class="fui-button__text {{!background && !disabledBackground && !plain && type==='gray' && color==='#fff'?'fui-btn__gray-color':''}} {{bold?'fui-text__bold':''}}"
       wx:if="{{text}}"
-      style="font-size: {{size}}rpx;line-height:{{size}}rpx;color:{{disabled && disabledBackground ? disabledColor : color}}">{{text}}</text>
+      style="font-size: {{parse.getSize(size,btnSize,c_size)}}rpx;line-height:{{parse.getSize(size,btnSize,c_size)}}rpx;color:{{disabled && disabledBackground ? disabledColor : color}}">{{text}}</text>
     <slot></slot>
   </button>
   <view wx:if="{{borderColor}}" class="fui-button__thin-border {{time && (plain || type==='link') && !disabled ? 'fui-button__opacity' : ''}} {{disabled && !disabledBackground ? 'fui-button__opacity' : ''}}"
-			style="border-width:{{borderWidth}};border-color:{{borderColor ? borderColor : disabled && disabledBackground ? disabledBackground : (background || 'transparent')}};border-radius:{{parse.getBorderRadius(radius)}}">
+			style="border-width:{{borderWidth}};border-color:{{borderColor ? borderColor : disabled && disabledBackground ? disabledBackground : (background || 'transparent')}};border-radius:{{parse.getBorderRadius(radius,c_radius)}}">
 		</view>
 </view>
 
 <wxs module="parse">
     module.exports={
-      getBorderRadius:function(radius) {
-				var radius = radius || '0'
+      getBorderRadius:function(radius,c_radius) {
+				var radius = radius || c_radius || '0'
 				if (~radius.indexOf('rpx')) {
 					radius = (parseInt(radius.replace('rpx', '')) * 2) + 'rpx'
 				} else if (~radius.indexOf('px')) {
@@ -29,6 +28,37 @@
 					radius = (parseInt(radius.replace('%', '')) * 2) + '%'
 				}
 				return radius
+      },
+      getWidth:function(width,btnSize){
+        var w = width;
+				if (btnSize && btnSize !== true) {
+					w = {
+						'medium': '400rpx',
+						'small': '200rpx',
+						'mini': '120rpx'
+					} [btnSize] || w
+				}
+        return w
+      },
+      getHeight:function(height,btnSize,c_height) {
+				var h = height || c_height
+				if (btnSize && btnSize !== true) {
+					h = {
+						'medium': '84rpx',
+						'small': '72rpx',
+						'mini': '64rpx'
+					} [btnSize] || height
+        }
+				return h
+      },
+      getSize:function(size,btnSize,c_size) {
+				var fontSize = size || c_size;
+				if (btnSize === 'small') {
+					fontSize = fontSize > 28 ? 28 : fontSize;
+				} else if (btnSize === 'mini') {
+					fontSize = fontSize > 28 ? 24 : fontSize;
+				}
+        return fontSize;
 			}
     }
 </wxs>

@@ -45,8 +45,8 @@ Component({
       value: '#fff'
     },
     scaleRatio: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 1
     }
   },

@@ -99,19 +99,7 @@
   overflow: visible;
 }
 
-
 .fui-input__border {
-  border-radius: 8rpx;
-  position: relative;
-  border-width: 0;
-}
-
-.fui-input__border-radius{
-  border-radius: 8rpx;
-}
-
-.fui-input__border::after {
-  content: ' ';
   position: absolute;
   height: 200%;
   width: 200%;
@@ -124,11 +112,12 @@
   pointer-events: none;
 }
 
-.fui-radius__fillet::after {
-  border-radius: 200px !important;
+.fui-input__bordercolor{
+  border-color:var(--fui-color-border, #EEEEEE) !important;
 }
-.fui-radius__fillet {
-  border-radius: 100px !important;
+
+.fui-input__background{
+  background: var(--fui-color-border, #EEEEEE) !important;
 }
 
 .fui-input__text-right {

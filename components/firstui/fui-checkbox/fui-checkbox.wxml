@@ -1,4 +1,4 @@
-<view class="fui-checkbox__input {{disabled?'fui-checkbox__disabled':''}} {{!color && val && !isCheckMark?'fui-checkbox__color':''}}" style="background:{{parse.getBackgroundColor(val,isCheckMark,color)}};border-color:{{parse.getBorderColor(val,isCheckMark, color, borderColor)}};zoom:scaleRatio;border-radius:{{borderRadius}}" catchtap="checkboxChange">
+<view class="fui-checkbox__input {{disabled?'fui-checkbox__disabled':''}} {{!color && val && !isCheckMark?'fui-checkbox__color':''}}" style="background:{{parse.getBackgroundColor(val,isCheckMark,color)}};border-color:{{parse.getBorderColor(val,isCheckMark, color, borderColor)}};zoom:{{scaleRatio}};border-radius:{{borderRadius}}" catchtap="checkboxChange">
   <view class="fui-check__mark" style="border-bottom-color:{{checkMarkColor}};border-right-color:{{checkMarkColor}}" wx:if="{{val}}"></view>
   <checkbox class="fui-checkbox__hidden" color="{{color}}" disabled="{{disabled}}" value="{{value}}" checked="{{val}}">
   </checkbox>
