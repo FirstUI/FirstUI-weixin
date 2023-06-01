@@ -1,5 +1,7 @@
 import fui from './common/fui-app.js'
+import fuiConfig from './components/firstui/fui-config/index'
 wx.fui = fui
+wx.$fui = fuiConfig
 App({
   onLaunch() {
     if (wx.canIUse('getUpdateManager')) {
