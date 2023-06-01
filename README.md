@@ -26,6 +26,8 @@
 ``` js
 // # GitHub
 git clone https://github.com/FirstUI/FirstUI-weixin.git
+
+// 注：会员代码请从官网个人中心订单处下载！
 ```
 
 #### 方式三 ：选择需要的模块引入
@@ -67,6 +69,8 @@ git clone https://github.com/FirstUI/FirstUI-weixin.git
 
 ### 相关链接
 
+`注：会员文档请从官网个人中心左侧菜单进入！`
+
 官网地址：[https://www.firstui.cn](https://www.firstui.cn)
 
 文档地址：[https://wxdoc.firstui.cn](https://wxdoc.firstui.cn)
@@ -82,6 +86,77 @@ First UI分为 `开源版` 和 `商业版`，所有示例或文档中加 V 的�
 
 
 ### 更新日志
+
+#### V1.9.8（2023-06-01）
+
+- 新增 MovableView 可移动的视图容器 组件。
+
+- 新增 HorizontalScroll 横向滚动的视图容器 组件。
+
+- Waterfall 瀑布流 组件优化，新增属性设置图片高度。当图片高度已知且固定时可直接设置值，可有效缩短渲染时间。
+
+- Button 按钮 组件优化， 新增 btnSize 属性设置按钮大小，优先级高于 width 和 height 属性。
+
+- Form 表单校验 组件 与 FormItem 表单项组件优化，新增属性 labelWeight 设置label 字重，默认使用全局配置。
+
+- Textarea 多行输入框 组件优化，属性 textareaBorder 为 true 时，支持设置边框颜色，支持设置圆角时显示边框。
+
+- Input 输入框 组件优化，属性 inputBorder 为 true 时，支持设置边框颜色，支持设置圆角时显示边框。
+
+- SearchBar 搜索栏 组件优化，新增默认插槽可自定左侧展示内容，如返回箭头。
+
+- OverflowHidden 内容超出隐藏 组件示例优化。
+
+- DatePicker 日期时间选择器 组件优化，区间选择时逻辑调整，未选则时点击确认按钮会默认赋值当前选项。
+
+- Table 表格 组件优化，新增多选功能，详见文档。
+
+- Steps 步骤条 组件优化，新增属性设置当前步骤的状态及颜色，新增属性设置线条是否加粗。
+
+- Fab 浮动按钮 组件优化，新增属性isDrag设置是否可以拖拽移动位置。
+
+- Upload 图片上传 组件优化，新增扩展方法进行上传，为了更好的满足更多场景需求，详见文档及示例。
+
+- UploadVideo 视频上传 组件优化，新增扩展方法进行上传，为了更好的满足更多场景需求，详见文档及示例。
+
+- 新增全局配置 fui-config ，详见文档。
+
+- Circle 圆形进度条 组件优化，主色默认使用全局配置颜色。
+
+- DataTag 标签选择组件优化，主色默认使用全局配置颜色。
+
+- Button 按钮 组件优化，部分属性可全局配置默认值。
+
+- Icon 图标 组件优化，部分属性可全局配置默认值。
+
+- Text 文本 组件优化，部分属性可全局配置默认值。
+
+- Input 输入框 组件优化，部分属性可全局配置默认值。
+
+- Textarea 多行输入框 组件优化，边框颜色默认可通过css变量修改。
+
+- FormItem 表单项组件优化，主色默认使用全局配置颜色。
+
+- List 列表 组件优化，部分属性可全局配置默认值。
+
+- Preview 表单预览 组件优化，调整部分样式。
+
+- Panel 面板 组件优化，调整部分样式。
+
+- Layout 栅格布局 组件（fui-row）组件优化，调整部分样式。
+
+- Avatar 头像 组件优化，新增 block 属性设置是否为块状元素，修复当为行内元素时外层容器底部可能出现间隙的问题。
+
+- SearchBar 搜索栏 组件优化，修复设置value值初始化错误的问题。
+
+- Gallery 画廊 组件优化，修复描述文本可能不显示的问题。
+
+- BubbleBox 气泡框 组件优化，right 属性默认值改为0。
+
+- Select 选择器 组件优化，修复已知问题。
+
+- 修复部分已知问题。
+
 
 #### V1.9.5（2023-05-05）
 
