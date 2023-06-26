@@ -30,7 +30,7 @@
   font-size: 28rpx;
 }
 
-.fui-link__color text {
+.fui-link__color {
   color: var(--fui-color-link, #465CFF) !important;
 }
 

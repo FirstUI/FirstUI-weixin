@@ -38,6 +38,7 @@ Component({
       })
     },
     changeValue(value, target) {
+      if (value === this.data.val) return;
       this.setData({
         val: value
       })

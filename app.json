@@ -49,9 +49,10 @@
         "data/divider/divider",
         "data/loadmore/loadmore",
         "data/empty/empty",
-        "js/utils/utils"
+        "js/utils/utils",
+        "layout/section/section"
       ]
-    } 
+    }
   ],
   "usingComponents": {
     "fui-list-cell": "components/firstui/fui-list-cell/fui-list-cell",

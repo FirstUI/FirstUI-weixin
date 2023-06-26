@@ -1,0 +1,5 @@
+.fui-vip__icon{
+  width: 48rpx;
+  height: 48rpx;
+  margin-left: 8rpx;
+}

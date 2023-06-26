@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "标题栏",
+  "usingComponents": {
+    "fui-section":"/components/firstui/fui-section/fui-section"
+  }
+}

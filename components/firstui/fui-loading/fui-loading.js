@@ -40,6 +40,11 @@ Component({
     isMask: {
       type: Boolean,
       value: false
+    },
+    //v1.9.9+
+    maskBgColor: {
+      type: String,
+      value: 'transparent'
     }
   }
 })

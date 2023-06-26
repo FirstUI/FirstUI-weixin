@@ -17,7 +17,7 @@ Component({
     },
     mode: {
       type: String,
-      value: 'widthFix'
+      value: 'scaleToFill'
     },
     //微信小程序、百度小程序、字节跳动小程序
     //图片懒加载。只针对page与scroll-view下的image有效
@@ -91,6 +91,10 @@ Component({
       type: String,
       optionalTypes: [Number],
       value: 0
+    },
+    block: {
+      type: Boolean,
+      value: false
     },
     //在列表中的索引值
     index: {

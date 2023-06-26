@@ -14,7 +14,7 @@ module.exports={
   getBottomLeft:function(bottomLeft,c_bottomLeft) {
       var left = bottomLeft;
       if (left === -1) {
-        left = (c_bottomLeft === undefined || c_left === null) ? 32 : c_bottomLeft
+        left = (c_bottomLeft === undefined || c_bottomLeft === null) ? 32 : c_bottomLeft
       }
       return left
     }

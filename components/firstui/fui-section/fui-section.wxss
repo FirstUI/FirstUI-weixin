@@ -1,0 +1,36 @@
+/* 全局样式中包含 fui-section 避免影响*/
+.fui-sections__wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fui-sections__title {
+  position: relative;
+  display: flex;
+  word-break: break-all;
+  flex-shrink: 0;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fui-sections__title-text {
+  word-break: break-all;
+}
+
+.fui-sections__line {
+  position: absolute;
+  left: 0;
+}
+
+.fui-sections__descr {
+  word-break: break-all;
+}
+
+.fui-sections__descr-text {
+  word-break: break-all;
+  font-weight: 400;
+}
+
+.fui-sections__line-color {
+  background: var(--fui-color-primary, #465CFF) !important;
+}

@@ -277,8 +277,8 @@ Component({
     onInput(event) {
       let value = event.detail.value;
       if (this.data.trim) value = this.trimStr(value);
-      if (this.data.type === 'digit' || this.data.type === 'number') {
-        const eVal= Number(value)
+      const eVal= Number(value)
+      if ((this.data.type === 'digit' || this.data.type === 'number') && !isNaN(eVal) && Number.isSafeInteger(eVal)) {
         value = this.data.type === 'digit' ? value : eVal
         if (typeof eVal === 'number') {
           const min = Number(this.data.min)

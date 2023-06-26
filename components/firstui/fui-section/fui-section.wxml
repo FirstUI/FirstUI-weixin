@@ -1,0 +1,28 @@
+<view class="fui-sections__wrap"
+		style="margin-top:{{marginTop}}rpx;margin-bottom:{{marginBottom}}rpx;background:{{background}};padding:{{padding}}">
+		<view class="fui-sections__title" bindtap="handleClick">
+			<view class="fui-sections__line {{!lineColor?'fui-sections__line-color':''}}"
+				style="background:{{lineColor}};width:{{lineWidth}};top:{{lineGap}}rpx;bottom:{{lineGap}}rpx;border-radius:{{lineCap==='circle'?lineWidth:0}};left:{{parse.getLeft(lineRight)}}rpx" wx:if="{{isLine}}">
+			</view>
+			<slot></slot>
+			<text class="fui-sections__title-text" style="font-size:{{size || c_size}}rpx;color:{{color || c_color}};font-weight:{{fontWeight || c_weight}};padding-left:{{parse.getPaddingLeft(lineRight,isLine)}}rpx;line-height:{{lineHeight==0?(size || c_size):lineHeight}}rpx" wx:if="{{title}}">{{title}}</text>
+			<slot name="right"></slot>
+		</view>
+		<view class="fui-sections__descr" style="padding-top:{{descrTop || c_descrtop }}rpx;" wx:if="{{descr}}">
+      <text class="fui-sections__descr-text" style="font-size: {{descrSize || c_descrsize}}rpx;color: {{descrColor || c_descrcolor}};">{{descr}}</text>
+		</view>
+		<slot name="descr"></slot>
+	</view>
+
+  <wxs module="parse">
+    module.exports = {
+      getLeft:function(lineRight){
+        var left = parseInt(lineRight || 0)
+        return left > 0 ? 0 : left
+      },
+      getPaddingLeft:function(lineRight,isLine){
+        var left = parseInt(lineRight || 0)
+        return left <= 0 || !isLine ? 0 : left
+      }
+    }
+  </wxs>

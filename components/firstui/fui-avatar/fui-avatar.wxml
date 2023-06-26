@@ -1,6 +1,6 @@
-<view class="fui-avatar__wrap {{width?'':'fui-avatar__size-'+size}} {{radius===-1?'fui-avatar__'+shape:''}}" style="{{parse.wrapStyles(background, marginRight, marginBottom, width, height, radius)}}" bindtap="handleClick">
-  <image class="fui-avatar__img {{radius===-1?'fui-avatar__'+shape:''}} {{width?'':'fui-avatar__size-'+size}}" style="{{parse.styles(width, height, radius)}}" src="{{showImg}}" mode="{{mode}}" wx:if="{{src}}" webp="{{webp}}" lazy-load="{{lazyLoad}}" binderror="handleError"></image>
-  <text class="fui-avatar__text {{width?'':'fui-avatar__text-'+size}}" wx:if="{{!src && text}}" style="{{parse.textStyles(color, fontWeight, fontSize)}}">{{text}}</text>
+<view class="fui-avatar__wrap {{width?'':'fui-avatar__size-'+size}} {{radius===-1?'fui-avatar__'+shape:''}} {{block?'fui-avatar__block':'fui-avatar__inline'}}" style="{{parse.wrapStyles(background, marginRight, marginBottom, width, height, radius)}}" bindtap="handleClick">
+  <image class="fui-avatar__img {{radius===-1?'fui-avatar__'+shape:''}} {{width?'':'fui-avatar__size-'+size}}" style="{{parse.styles(width, height, radius)}}" src="{{showImg}}" mode="{{mode}}" wx:if="{{src && src!==true}}" webp="{{webp}}" lazy-load="{{lazyLoad}}" binderror="handleError"></image>
+  <text class="fui-avatar__text {{width?'':'fui-avatar__text-'+size}}" wx:if="{{!src && src!==true && text}}" style="{{parse.textStyles(color, fontWeight, fontSize)}}">{{text}}</text>
   <slot></slot>
 </view>
 
