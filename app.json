@@ -1,5 +1,5 @@
 {
-  "pages": [
+  "pages": [ 
     "pages/tabbar/index/index",
     "pages/tabbar/layout/layout",
     "pages/tabbar/template/template",

@@ -1,4 +1,4 @@
-const fui = { 
+const fui = {  
 	toast: function(text) { 
 		text && wx.showToast({ 
 			title: text,

@@ -15,7 +15,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.fui-tag__no-border {
+  border-width: 0;
+}
 .fui-tag__text {
   white-space: nowrap;
   overflow: hidden;

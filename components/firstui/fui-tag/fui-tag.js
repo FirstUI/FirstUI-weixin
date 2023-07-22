@@ -19,6 +19,11 @@ Component({
       type: String,
       value: ''
     },
+    //v2.0.0+ 
+    isBorder: {
+      type: Boolean,
+      value: true
+    },
     borderColor: {
       type: String,
       value: ''
