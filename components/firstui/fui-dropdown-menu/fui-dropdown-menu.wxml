@@ -1,6 +1,6 @@
 <view class="fui-dropdown__menu">
   <slot></slot>
-  <view class="fui-dropdown__menu-list {{direction!=='up'?'fui-ddm__down':''}} {{direction==='up'?'fui-ddm__up':''}} {{isShow && direction!=='up'?'fui-ddm__down-show':''}} {{isShow && direction==='up'?'fui-ddm__up-show':''}}" style="{{parse.getStyles(radius, background, right)}}">
+  <view class="fui-dropdown__menu-list {{direction!=='up'?'fui-ddm__down':''}} {{direction==='up'?'fui-ddm__up':''}} {{isShow && direction!=='up'?'fui-ddm__down-show':''}} {{isShow && direction==='up'?'fui-ddm__up-show':''}}" style="{{parse.getStyles(radius, background, right,left)}}">
     <scroll-view class="fui-ddm__scroll" scroll-y style="max-height:{{maxHeight}}rpx;min-width:{{minWidth}}rpx">
       <view class="fui-dropdown__menu-item {{isReverse?'fui-ddm__reverse':''}} {{splitLine && itemList.length-1!==index?'fui-ddm__item-line':''}}" style="background:{{background}};padding:{{padding}}" wx:for="{{itemList}}" wx:for-item="model" wx:key="index" catchtap="itemClick" data-index="{{index}}">
         <view class="fui-ddm__checkbox {{isCheckMark?'fui-is__checkmark':''}} {{(!checkboxColor || checkboxColor===true) && model.checked && !isCheckMark?'fui-ddm__checkbox-color':''}}" style="background:{{model.checked && !isCheckMark ?checkboxColor:'transparent'}};border-color:{{model.checked && !isCheckMark ?checkboxColor:borderColor}}" wx:if="{{isCheckbox}}">
@@ -21,13 +21,13 @@
 
 <wxs module="parse">
   module.exports = {
-    getStyles: function (radius, background, right) {
+    getStyles: function (radius, background, right,left) {
       var styles = "border-radius:" + radius + "rpx;background:" + background + ";"
       var rightValue = parseInt(right || 0)
       if (rightValue >= 0) {
         styles += 'right:0;'
       } else {
-        styles += 'left:0;'
+        styles += 'left:' + (left || 0) + 'rpx;'
       }
       return styles
     }
