@@ -1,0 +1,25 @@
+<view class="fui-white__space-wrap {{'fui-white__space-'+(parse.getHeight(height || c_height)?'':(size || c_size))}}" style="{{parse.getStyles(background || c_background,height || c_height)}}" bindtap="handleClick">
+  <slot></slot>
+</view>
+
+<wxs module="parse">
+  function gHeight(height) {
+    var style = ''
+    var h = parseInt(height)
+    if (h && h > 0) {
+      style += h + 'rpx'
+    }
+    return style;
+  }
+  module.exports = {
+    getHeight: gHeight,
+    getStyles: function (background, height) {
+      var style = "background:" + background + ";"
+      var h = gHeight(height)
+      if (h) {
+        style += "height:" + h + ";"
+      }
+      return style
+    }
+  }
+</wxs>

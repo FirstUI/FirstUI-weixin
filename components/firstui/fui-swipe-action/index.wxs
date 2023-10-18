@@ -120,7 +120,7 @@ function moveDirection(left, ins, ownerInstance) {
 	var position = state.position
 	var open = state.open || 'none'
 	var rightWidth = state.rightWidth
-	if (state.deltaX === 0) {
+	if (state.deltaX === 0 && state.clickclose) {
 		openState('none', ins, ownerInstance)
 		return
 	}
@@ -173,6 +173,14 @@ function thresholdChange(newVal, oldVal, ownerInstance, ins) {
 	var st = ins.getState()
 	st.threshold = newVal || 30
 }
+function clickCloseChange(newVal, oldVal, ownerInstance, ins) {
+	var st = ins.getState()
+	if (newVal || newVal === null || newVal === undefined) {
+		st.clickclose = true
+	} else {
+		st.clickclose = false
+	}
+}
 
 module.exports = {
 	touchstart: touchstart,
@@ -180,5 +188,6 @@ module.exports = {
 	touchend: touchend,
 	disabledChange: disabledChange,
 	thresholdChange: thresholdChange,
-	showChange: showChange
+	showChange: showChange,
+	clickCloseChange:clickCloseChange
 }

@@ -106,3 +106,6 @@
 .fui-text__right{
   text-align: right;
 }
+.fui-textarea__disabled-styl {
+  opacity: .6;
+}

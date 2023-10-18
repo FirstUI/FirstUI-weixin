@@ -1,40 +1,40 @@
 <view class="fui-input__wrap" style="padding:{{padding}};background:{{backgroundColor}};margin-top:{{marginTop}}rpx;border-radius: {{parse.getRadius(radius,isFillet)}};" bindtap="fieldClick">
-    <view wx:if="{{borderTop && !inputBorder}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx" class="fui-input__border-top {{!borderColor?'fui-input__background':''}}">
-    </view>
-    <view class="fui-input__border {{!borderColor?'fui-input__bordercolor':''}}" style="border-radius:{{parse.getBorderRadius(radius,isFillet)}};border-color:{{borderColor}}" wx:if="{{inputBorder}}"></view>
-    <view class="fui-input__required" style="color:{{requiredColor || c_dangerColor}}" wx:if="{{required}}">*</view>
-    <view class="fui-input__label" style="min-width:{{labelWidth}}rpx" wx:if="{{label}}">
-      <text style="font-size:{{labelSize || c_labelSize}}rpx;color:{{labelColor || c_labelColor}}">{{label}}</text>
-    </view>
-    <slot name="left"></slot>
-    <input class="fui-input__self {{textRight?'fui-input__text-right':''}}" style="font-size:{{size || c_size}}rpx;color:{{color || c_color}}" placeholder-class="fui-input__placeholder" type="{{type}}" name="{{name}}" model:value="{{value}}" password="{{password}}" placeholder="{{placeholder}}" placeholder-style="{{placeholderStyl}}" disabled="{{disabled || readonly}}" cursor-spacing="{{cursorSpacing}}" maxlength="{{maxlength}}" focus="{{focused}}" confirm-type="{{confirmType}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" auto-blur="{{autoBlur}}" enableNative="{{false}}" always-embed="{{alwaysEmbed}}" bindfocus="onFocus" bindblur="onBlur" bindinput="onInput" bindconfirm="onConfirm" bindkeyboardheightchange="onKeyboardheightchange" />
-    <view class="fui-input__clear-wrap" style="background:{{clearColor}}" wx:if="{{clearable && value != ''}}" catchtap="onClear">
-      <view class="fui-input__clear">
-        <view class="fui-input__clear-a"></view>
-      </view>
-      <view class="fui-input__clear">
-        <view class="fui-input__clear-b"></view>
-      </view>
-    </view>
-    <slot></slot>
-    <view wx:if="{{borderBottom  && !inputBorder}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx" class="fui-input__border-bottom {{!borderColor?'fui-input__background':''}}"></view>
+  <view wx:if="{{borderTop && !inputBorder}}" style="background:{{borderColor}};left:{{topLeft}}rpx;right:{{topRight}}rpx" class="fui-input__border-top {{!borderColor?'fui-input__background':''}}">
   </view>
+  <view class="fui-input__border {{!borderColor?'fui-input__bordercolor':''}}" style="border-radius:{{parse.getBorderRadius(radius,isFillet)}};border-color:{{borderColor}}" wx:if="{{inputBorder}}"></view>
+  <view class="fui-input__required" style="color:{{requiredColor || c_dangerColor}}" wx:if="{{required}}">*</view>
+  <view class="fui-input__label" style="min-width:{{labelWidth}}rpx" wx:if="{{label}}">
+    <text style="font-size:{{labelSize || c_labelSize}}rpx;color:{{labelColor || c_labelColor}}">{{label}}</text>
+  </view>
+  <slot name="left"></slot>
+  <input class="fui-input__self {{textRight?'fui-input__text-right':''}} {{disabled && disabledStyle?'fui-input__disabled-styl':''}}" style="font-size:{{size || c_size}}rpx;color:{{color || c_color}}" placeholder-class="fui-input__placeholder" type="{{type}}" name="{{name}}" model:value="{{value}}" password="{{password}}" placeholder="{{value?'':placeholder}}" placeholder-style="{{placeholderStyl}}" disabled="{{disabled || readonly}}" cursor-spacing="{{cursorSpacing}}" maxlength="{{maxlength}}" focus="{{focused}}" confirm-type="{{confirmType}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" adjust-position="{{adjustPosition}}" hold-keyboard="{{holdKeyboard}}" auto-blur="{{autoBlur}}" enableNative="{{false}}" always-embed="{{alwaysEmbed}}" bindfocus="onFocus" bindblur="onBlur" bindinput="onInput" bindconfirm="onConfirm" bindkeyboardheightchange="onKeyboardheightchange" />
+  <view class="fui-input__clear-wrap" style="background:{{clearColor}}" wx:if="{{clearable && value != ''}}" catchtap="onClear">
+    <view class="fui-input__clear">
+      <view class="fui-input__clear-a"></view>
+    </view>
+    <view class="fui-input__clear">
+      <view class="fui-input__clear-b"></view>
+    </view>
+  </view>
+  <slot></slot>
+  <view wx:if="{{borderBottom  && !inputBorder}}" style="background:{{borderColor}};left:{{bottomLeft}}rpx;right:{{bottomRight}}rpx" class="fui-input__border-bottom {{!borderColor?'fui-input__background':''}}"></view>
+</view>
 
 <wxs module="parse">
   module.exports = {
-    getBorderRadius:function(radius,isFillet) {
-				var radius = parseInt(radius) * 2 + 'rpx'
-				if (isFillet) {
-					radius = '240px'
-				}
-				return radius;
+    getBorderRadius: function (radius, isFillet) {
+      var radius = parseInt(radius) * 2 + 'rpx'
+      if (isFillet) {
+        radius = '240px'
+      }
+      return radius;
     },
-    getRadius:function(radius,isFillet){
+    getRadius: function (radius, isFillet) {
       var radius = radius + 'rpx'
-				if (isFillet) {
-          radius = '120px'
-				}
-				return radius;
+      if (isFillet) {
+        radius = '120px'
+      }
+      return radius;
     }
   }
 </wxs>

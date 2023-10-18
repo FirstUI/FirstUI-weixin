@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "上下间距",
+  "usingComponents": {
+    "fui-white-space":"/components/firstui/fui-white-space/fui-white-space"
+  }
+}

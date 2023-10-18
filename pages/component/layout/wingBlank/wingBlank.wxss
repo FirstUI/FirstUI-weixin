@@ -1,0 +1,13 @@
+page {
+  font-weight: normal;
+}
+
+.fui-section__title {
+  margin-left: 32rpx;
+}
+
+.fui-block {
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+}

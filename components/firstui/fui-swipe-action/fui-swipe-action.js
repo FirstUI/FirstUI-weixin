@@ -25,7 +25,7 @@ Component({
       value: false,
       observer(val) {
         this.setData({
-          isShow: val
+          isShow: val ? 'right' : 'none'
         })
       }
     },
@@ -52,10 +52,27 @@ Component({
       type: Boolean,
       value: true
     },
+    //v2.1.0+ 点击当前菜单是否立即关闭菜单
+    clickClose: {
+      type: Boolean,
+      value: true
+    },
     //自定义按钮
-    custom:{
+    custom: {
       type: Boolean,
       value: false
+    },
+    //1.9.9+
+    marginTop: {
+      type: String,
+      optionalTypes: [Number],
+      value: 0
+    },
+    //1.9.9+
+    marginBottom: {
+      type: String,
+      optionalTypes: [Number],
+      value: 0
     },
     param: {
       type: Number,
@@ -82,7 +99,7 @@ Component({
   lifetimes: {
     ready: function () {
       this.setData({
-        isShow: this.data.show,
+        isShow: this.data.show ? 'right' : 'none',
         isDisabled: this.data.disabled,
         thresholdVal: Number(this.data.threshold)
       })

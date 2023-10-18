@@ -50,7 +50,9 @@
         "data/loadmore/loadmore",
         "data/empty/empty",
         "js/utils/utils",
-        "layout/section/section"
+        "layout/section/section",
+        "layout/whiteSpace/whiteSpace",
+        "layout/wingBlank/wingBlank"
       ]
     }
   ],

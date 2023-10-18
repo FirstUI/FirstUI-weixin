@@ -1,0 +1,16 @@
+<view class="fui-wing__blank-wrap {{radius?'fui-wing__blank-hidden':''}} {{parse.getPadding(gap, c_gap)?'':'fui-wing__blank-'+(size || c_size)}}" style="background:{{background || c_background}};border-radius:{{radius}}rpx;margin-top:{{marginTop}}rpx;margin-bottom:{{marginBottom}}rpx;{{parse.getPadding(gap, c_gap)}}" bindtap="handleClick">
+  <slot></slot>
+</view>
+
+<wxs module="parse">
+  module.exports = {
+    getPadding: function (gap, c_gap) {
+      var styles = '';
+      var padding = parseInt(gap || c_gap)
+      if (padding && padding > 0) {
+        styles += "padding:0 " + padding + "rpx;";
+      }
+      return styles
+    }
+  }
+</wxs>

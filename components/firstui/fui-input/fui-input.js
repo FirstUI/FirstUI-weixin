@@ -90,7 +90,12 @@ Component({
       type: Boolean,
       value: false
     },
-    readonly:{
+    //V2.1.0+
+    disabledStyle: {
+      type: Boolean,
+      value: false
+    },
+    readonly: {
       type: Boolean,
       value: false
     },
@@ -99,7 +104,7 @@ Component({
       optionalTypes: [String],
       value: 140
     },
-    min:{
+    min: {
       type: Number,
       optionalTypes: [String],
       value: 'NaN'
@@ -244,11 +249,11 @@ Component({
   data: {
     placeholderStyl: '',
     focused: false,
-    c_labelSize:(wx.$fui && wx.$fui.fuiInput.labelSize) || 32,
+    c_labelSize: (wx.$fui && wx.$fui.fuiInput.labelSize) || 32,
     c_size: (wx.$fui && wx.$fui.fuiInput.size) || 32,
-    c_labelColor:(wx.$fui && wx.$fui.fuiInput.labelColor) || '#333',
+    c_labelColor: (wx.$fui && wx.$fui.fuiInput.labelColor) || '#333',
     c_color: (wx.$fui && wx.$fui.fuiInput.color) || '#333',
-    c_dangerColor:(wx.$fui && wx.$fui.color.danger) || '#FF2B2B'
+    c_dangerColor: (wx.$fui && wx.$fui.color.danger) || '#FF2B2B'
   },
   lifetimes: {
     attached: function () {
@@ -277,7 +282,7 @@ Component({
     onInput(event) {
       let value = event.detail.value;
       if (this.data.trim) value = this.trimStr(value);
-      const eVal= Number(value)
+      const eVal = Number(value)
       if ((this.data.type === 'digit' || this.data.type === 'number') && !isNaN(eVal) && Number.isSafeInteger(eVal)) {
         value = this.data.type === 'digit' ? value : eVal
         if (typeof eVal === 'number') {
@@ -286,18 +291,18 @@ Component({
           if (typeof min === 'number' && eVal < min) {
             value = min
             this.setData({
-              value:value
+              value: value
             })
           } else if (typeof max === 'number' && max < eVal) {
             value = max
             this.setData({
-              value:value
+              value: value
             })
           }
         }
       }
       //如果为空时返回0 ，当双向绑定会将输入框赋值0
-			const inputValue = event.detail.value !== '' ? value : ''
+      const inputValue = event.detail.value !== '' ? value : ''
       this.triggerEvent('input', inputValue);
     },
     onFocus(event) {
@@ -310,7 +315,7 @@ Component({
       this.triggerEvent('confirm', e.detail);
     },
     onClear(event) {
-      if(this.data.disabled && !this.data.readonly) return;
+      if (this.data.disabled && !this.data.readonly) return;
       wx.hideKeyboard()
       this.triggerEvent('input', '');
       this.setData({

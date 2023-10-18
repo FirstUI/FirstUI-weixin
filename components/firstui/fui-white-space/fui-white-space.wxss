@@ -1,0 +1,16 @@
+.fui-white__space-wrap {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.fui-white__space-small {
+  height: 16rpx
+}
+
+.fui-white__space-default {
+  height: 24rpx
+}
+
+.fui-white__space-large {
+  height: 32rpx
+}

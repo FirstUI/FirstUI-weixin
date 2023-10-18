@@ -123,3 +123,6 @@
 .fui-input__text-right {
   text-align: right;
 }
+.fui-input__disabled-styl{
+  opacity: .6;
+}

@@ -1,13 +1,13 @@
 import utils from '../../../../components/firstui/fui-utils/index';
 Page({
-  data:{
-    num:0
+  data: {
+    num: 0
   },
-  onLoad(){
+  onLoad() {
     this.throttle = utils.throttle(() => {
-       this.setData({
-         num: this.data.num + 1
-       })
+      this.setData({
+        num: this.data.num + 1
+      })
     }, 3000)
   },
   titleCase() {
@@ -54,6 +54,21 @@ Page({
     const text = '2021';
     const val = utils.moneyFormatter(text);
     console.log(val);
+    wx.fui.toast(val)
+  },
+  dateFormatter(e) {
+    const type = Number(e.currentTarget.dataset.type)
+    const date = '2023-10-30 22:36:15'
+    // y-m-d h:i:s
+    const format = ['y-m-d h:i', 'y/m/d', 'm-d', 'h:i', 'i:s','y年m月d日 h时i分s秒'][type - 1]
+    const val = utils.dateFormatter(date, format);
+    console.log(val)
+    wx.fui.toast(val)
+  },
+  dateFormatAgo() {
+    const date = '2023-10-15 22:56:15'
+    const val = utils.formatTimeAgo(date)
+    console.log(val)
     wx.fui.toast(val)
   },
   btnThrottle() {

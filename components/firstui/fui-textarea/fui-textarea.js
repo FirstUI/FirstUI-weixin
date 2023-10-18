@@ -95,6 +95,11 @@ Component({
       type: Boolean,
       value: false
     },
+    //V2.1.0+
+    disabledStyle: {
+      type: Boolean,
+      value: false
+    },
     maxlength: {
       type: Number,
       optionalTypes: [String],
@@ -202,11 +207,11 @@ Component({
     },
     radius: {
       type: String,
-      optionalTypes:[Number],
+      optionalTypes: [Number],
       value: 0,
-      observer(val){
+      observer(val) {
         this.setData({
-          isRadius:val && val !== true && Number(val) > 0?true:false
+          isRadius: val && val !== true && Number(val) > 0 ? true : false
         })
       }
     },
@@ -257,11 +262,11 @@ Component({
     focused: false,
     val: '',
     isRadius: false,
-    c_dangerColor:(wx.$fui && wx.$fui.color.danger) || '#FF2B2B'
+    c_dangerColor: (wx.$fui && wx.$fui.color.danger) || '#FF2B2B'
   },
   lifetimes: {
     attached: function () {
-      let val =this.getVal(this.data.value);
+      let val = this.getVal(this.data.value);
       const len = this.getCount(String(val).length)
       this.setData({
         count: len,
@@ -272,9 +277,9 @@ Component({
     ready: function () {
       if (this.data.radius && this.data.radius !== true && Number(this.data.radius) > 0) {
         this.setData({
-          isRadius:true
+          isRadius: true
         })
-			}
+      }
       setTimeout(() => {
         this.setData({
           focused: this.data.focus
@@ -299,7 +304,7 @@ Component({
     },
     getCount(len) {
       const max = Number(this.data.maxlength)
-      return len > max && max!==-1 ? max : len
+      return len > max && max !== -1 ? max : len
     },
     onInput(event) {
       let value = event.detail.value;
