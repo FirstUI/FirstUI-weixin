@@ -8,7 +8,7 @@ Component({
         if (newVal) {
           this.open();
         } else {
-          this.close();
+           this.data.isShow && this.close();
         }
       }
     },

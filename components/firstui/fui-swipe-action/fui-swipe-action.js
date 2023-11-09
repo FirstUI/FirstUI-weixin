@@ -112,10 +112,11 @@ Component({
   },
   methods: {
     unInstall() {
-      if (this.data.group) {
-        this.data.group.children.forEach((item, index) => {
+      const group = this.data.group
+      if (group) {
+        group.data.children.forEach((item, index) => {
           if (item === this) {
-            this.data.group.children.splice(index, 1)
+            group.data.children.splice(index, 1)
           }
         })
       }

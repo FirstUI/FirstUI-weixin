@@ -225,9 +225,15 @@ Component({
       type: Boolean,
       value: true
     },
+    //即将废弃，请使用textAlign属性
     textRight: {
       type: Boolean,
       value: false
+    },
+    //V2.2.0+ 可选值：left/center/right
+    textAlign: {
+      type: String,
+      value: 'left'
     },
     //输入框padding值
     padding: {
