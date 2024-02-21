@@ -1,5 +1,5 @@
 .fui-switch__input {
-  display: inline-block;
+  display: inline;
 }
 .fui-checkbox__self {
   font-size: 0;
@@ -39,8 +39,7 @@
   transition: transform .3s
 }
 
-.fui-switch__input-def::after {
-  content: " ";
+.fui-switch__input-after {
   position: absolute;
   top: 0;
   left: 0;
@@ -49,14 +48,21 @@
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0 0 3px rgba(0, 0, 0, .4);
-  transition: transform .3s
+  transition: transform .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .fui-switch__input--checked::before {
   transform: scale(0)
 }
 
-.fui-switch__input--checked::after {
+.fui-switch__input--checked::before {
+  transform: scale(0)
+}
+
+.fui-switch__input--after {
   transform: translateX(20px)
 }
 

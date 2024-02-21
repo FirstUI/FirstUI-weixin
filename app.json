@@ -52,7 +52,8 @@
         "js/utils/utils",
         "layout/section/section",
         "layout/whiteSpace/whiteSpace",
-        "layout/wingBlank/wingBlank"
+        "layout/wingBlank/wingBlank",
+        "basics/css/css"
       ]
     }
   ],

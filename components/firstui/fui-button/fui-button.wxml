@@ -2,9 +2,9 @@
   <button
     class="fui-button {{bold ? 'fui-text__bold' : ''}} {{	time && (plain || type==='link') ? 'fui-button__opacity' : ''}} {{disabled && !disabledBackground ? 'fui-button__opacity' : ''}} {{!background && !disabledBackground && !plain?('fui-button__'+type):''}} {{(!width || width==='100%' || width===true) && !btnSize?'fui-button__flex-1':''}} {{time && !plain && type!=='link' ? 'fui-button__active' : ''}}"
     style="width: {{parse.getWidth(width,btnSize)}};height: {{parse.getHeight(height,btnSize,c_height)}};line-height: {{parse.getHeight(height,btnSize,c_height)}};background: {{disabled && disabledBackground ? disabledBackground : (plain ? 'transparent' : background)}};border-radius: {{radius}};font-size: {{parse.getSize(size,btnSize,c_size)}}rpx;color: {{disabled && disabledBackground ? disabledColor : color}}"
-    loading="{{loading}}" form-type="{{formType}}" app-parameter="{{appParameter}}" open-type="{{openType}}" bindgetuserinfo="bindgetuserinfo"
+    loading="{{loading}}" form-type="{{formType}}" app-parameter="{{appParameter}}" open-type="{{openType}}" hoverStopPropagation="{{hoverStopPropagation}}" lang="{{lang}}" sessionFrom="{{sessionFrom}}" sendMessageTitle="{{sendMessageTitle}}" sendMessagePath="{{sendMessagePath}}" sendMessageImg="{{sendMessageImg}}" showMessageCard="{{showMessageCard}}" phoneNumberNoQuotaToast="{{phoneNumberNoQuotaToast}}" bindgetuserinfo="bindgetuserinfo"
     bindgetphonenumber="bindgetphonenumber" bindcontact="bindcontact" binderror="binderror"
-    bindopensetting="bindopensetting"  bindchooseavatar="bindchooseavatar" bindlaunchapp="bindlaunchapp" disabled="{{disabled}}" catchtap="handleTap">
+    bindopensetting="bindopensetting"  bindchooseavatar="bindchooseavatar" bindlaunchapp="bindlaunchapp" bindagreeprivacyauthorization="agreeprivacyauthorization" bindgetrealtimephonenumber="bindgetrealtimephonenumber" disabled="{{disabled}}" catchtap="handleTap">
     <text
       class="fui-button__text {{!background && !disabledBackground && !plain && type==='gray' && color==='#fff'?'fui-btn__gray-color':''}} {{bold?'fui-text__bold':''}}"
       wx:if="{{text}}"

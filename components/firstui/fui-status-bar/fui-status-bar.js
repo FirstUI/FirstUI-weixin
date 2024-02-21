@@ -15,16 +15,37 @@ Component({
     zIndex: {
       type: Number,
       value: 99
+    },
+    //v2.3.0+
+    isOccupy: {
+      type: Boolean,
+      value: false,
+      observer(val) {
+        this.getStyle()
+      }
     }
   },
   data: {
-    statusBarHeight
+    statusBarHeight: statusBarHeight,
+    style: ''
   },
   lifetimes: {
-     attached:function(){
+    attached: function () {
+      this.getStyle()
       this.triggerEvent('init', {
-				statusBarHeight: statusBarHeight
-			})
-     }
+        statusBarHeight: statusBarHeight
+      })
+    }
+  },
+  methods: {
+    getStyle() {
+      let style = ''
+      if (this.data.isOccupy) {
+        style += `height:${this.data.statusBarHeight}px;`
+      }
+      this.setData({
+        style
+      })
+    }
   }
 })

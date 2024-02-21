@@ -97,6 +97,39 @@ Component({
       type: String,
       value: ''
     },
+    //v2.3.0+
+    hoverStopPropagation: {
+      type: Boolean,
+      value: false
+    },
+    lang: {
+      type: String,
+      value: 'en'
+    },
+    sessionFrom: {
+      type: String,
+      value: ''
+    },
+    sendMessageTitle: {
+      type: String,
+      value: ''
+    },
+    sendMessagePath: {
+      type: String,
+      value: ''
+    },
+    sendMessageImg: {
+      type: String,
+      value: ''
+    },
+    showMessageCard: {
+      type: Boolean,
+      value: false
+    },
+    phoneNumberNoQuotaToast: {
+      type: Boolean,
+      value: true
+    },
     index: {
       type: Number,
       optionalTypes: [String],
@@ -107,9 +140,9 @@ Component({
     time: 0,
     trigger: false,
     tap: false,
-    c_height:(wx.$fui && wx.$fui.fuiButton.height) || '96rpx',
+    c_height: (wx.$fui && wx.$fui.fuiButton.height) || '96rpx',
     c_size: (wx.$fui && wx.$fui.fuiButton.size) || 32,
-    c_radius:(wx.$fui && wx.$fui.fuiButton.radius) || '16rpx'
+    c_radius: (wx.$fui && wx.$fui.fuiButton.radius) || '16rpx'
   },
   methods: {
     handleStart() {
@@ -136,7 +169,7 @@ Component({
         })
       }, 150);
     },
-    handleTap(){
+    handleTap() {
       if (this.disabled) return;
       this.triggerEvent('click', {
         index: Number(this.data.index)
@@ -176,6 +209,16 @@ Component({
       detail = {}
     } = {}) {
       this.triggerEvent('launchapp', detail);
+    },
+    agreeprivacyauthorization({
+      detail = {}
+    } = {}) {
+      this.triggerEvent('agreeprivacyauthorization', detail);
+    },
+    bindgetrealtimephonenumber({
+      detail = {}
+    } = {}) {
+      this.triggerEvent('getrealtimephonenumber', detail);
     }
   }
 })

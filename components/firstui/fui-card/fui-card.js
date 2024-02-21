@@ -1,4 +1,8 @@
 Component({
+  options: {
+    multipleSlots: true,
+    styleIsolation: 'apply-shared'
+  },
   properties: {
     //card margin值
     margin: {
@@ -38,6 +42,11 @@ Component({
     headerLine: {
       type: Boolean,
       value: true
+    },
+    //是否需要内容与footer之间线条
+    footerLine: {
+      type: Boolean,
+      value: false
     },
     //header padding值
     padding: {

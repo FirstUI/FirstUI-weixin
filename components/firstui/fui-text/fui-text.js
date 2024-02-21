@@ -1,7 +1,8 @@
 Component({
   options: {
     virtualHost: true,
-    multipleSlots: true
+    multipleSlots: true,
+    styleIsolation: 'apply-shared'
   },
   properties: {
      //样式类型：primary，success， warning，danger，purple，gray，black

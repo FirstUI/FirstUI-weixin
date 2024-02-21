@@ -8,7 +8,7 @@
       <text style="font-size:{{tagSize}}rpx;color:{{tagColor}}">{{tag}}</text>
     </view>
   </view>
-  <view class="fui-card__body">
+  <view class="fui-card__body {{footerLine?'fui-card__header-line':''}}">
     <slot></slot>
   </view>
   <view class="fui-card__footer" style="border-bottom-left-radius:{{full?0:radius}};border-bottom-right-radius:{{full?0:radius}}">
