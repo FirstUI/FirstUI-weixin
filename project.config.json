@@ -4,7 +4,7 @@
     "ignore": [
       {
         "value": ".eslintrc.js",
-        "type": "file"
+        "type": "file" 
       }
     ],
     "include": []

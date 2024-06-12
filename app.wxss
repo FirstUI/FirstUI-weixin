@@ -1,4 +1,4 @@
-@import './components/firstui/fui-theme/fui-theme.wxss'; 
+@import './components/firstui/fui-theme/fui-theme.wxss';  
 page { 
 	background-color: var(--fui-bg-color-grey,#F1F4FA);
 	font-size: 32rpx; 

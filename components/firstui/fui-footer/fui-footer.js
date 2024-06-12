@@ -36,6 +36,16 @@ Component({
     isFixed: {
       type: Boolean,
       value: false
+    },
+    bottom: {
+      type: String,
+      optionalTypes:[Number],
+      value: 0
+    },
+    //是否适配底部安全区
+    safeArea: {
+      type: Boolean,
+      value: true
     }
   }
 })

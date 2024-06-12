@@ -29,10 +29,18 @@ Component({
       type: String,
       value: ''
     },
+    background: {
+      type: String,
+      value: '#fdfdfd'
+    },
     //switch选中时按钮颜色 V2.3.0+
     btnColor: {
       type: String,
       value: ''
+    },
+    btnBgColor: {
+      type: String,
+      value: '#fff'
     },
     //边框颜色，type=checkbox时生效
     borderColor: {

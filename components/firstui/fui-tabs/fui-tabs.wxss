@@ -33,8 +33,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-left: 32rpx;
-  padding-right: 32rpx;
   position: relative;
 }
 

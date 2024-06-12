@@ -2,7 +2,7 @@ const fui = {
 	toast: function(text) { 
 		text && wx.showToast({ 
 			title: text,
-			icon: 'none',
+			icon: 'none', 
 			duration: 2000
 		})
 	},

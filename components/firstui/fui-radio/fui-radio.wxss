@@ -15,10 +15,12 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
+  
 }
-
-.fui-radio__color {
+.fui-radio__active-bgcolor {
   background: var(--fui-color-primary, #465CFF) !important;
+}
+.fui-radio__color {
   border-color: var(--fui-color-primary, #465CFF) !important;
 }
 
@@ -34,6 +36,12 @@
   box-sizing: border-box;
   transform: rotate(45deg) scale(0.5) translateZ(0);
   transform-origin: 54% 48%;
+}
+.fui-check__mark-circle {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin: 0;
 }
 
 .fui-radio__hidden {

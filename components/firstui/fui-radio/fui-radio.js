@@ -5,6 +5,7 @@ Component({
   properties: {
     value: {
       type: String,
+      optionalTypes: [Number],
       value: ''
     },
     checked: {
@@ -44,7 +45,16 @@ Component({
       type: String,
       value: '#fff'
     },
+    dotColor: {
+      type: String,
+      value: ''
+    },
     scaleRatio: {
+      type: String,
+      optionalTypes: [Number],
+      value: 1
+    },
+    styleType: {
       type: String,
       optionalTypes: [Number],
       value: 1
@@ -81,9 +91,22 @@ Component({
           val: this.data.checked
         })
       }
+    },
+    detached: function () {
+      this.unInstall()
     }
   },
   methods: {
+    unInstall() {
+      const group = this.getRelationNodes('../fui-radio-group/fui-radio-group')[0]
+      if (group) {
+        group.data.childrens.forEach((item, index) => {
+          if (item === this) {
+            group.data.childrens.splice(index, 1)
+          }
+        })
+      }
+    },
     radioChange(e) {
       if (this.data.disabled || this.data.val) return;
       this.setData({

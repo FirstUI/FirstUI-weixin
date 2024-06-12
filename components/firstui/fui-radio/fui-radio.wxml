@@ -1,20 +1,22 @@
-<view class="fui-radio__input {{disabled?'fui-radio__disabled':''}} {{!color && val && !isCheckMark?'fui-radio__color':''}}" style="background:{{parse.getBackgroundColor(val,isCheckMark,color)}};border-color:{{parse.getBorderColor(val,isCheckMark, color, borderColor)}};zoom:{{scaleRatio}};border-radius:{{borderRadius}}" catchtap="radioChange">
-  <view class="fui-check__mark" style="border-bottom-color:{{checkMarkColor}};border-right-color:{{checkMarkColor}}" wx:if="{{val}}"></view>
+<view class="fui-radio__input {{disabled?'fui-radio__disabled':''}} {{!color && val && (!isCheckMark || styleType==2)?'fui-radio__color':''}} {{!color && val && !isCheckMark && styleType==1?'fui-radio__active-bgcolor':''}}" style="background:{{parse.getBackgroundColor(val,isCheckMark,color,styleType)}};border-color:{{parse.getBorderColor(val,isCheckMark, color, borderColor,styleType)}};zoom:{{scaleRatio}};border-radius:{{borderRadius}}" catchtap="radioChange">
+  <view class="fui-check__mark" style="border-bottom-color:{{checkMarkColor}};border-right-color:{{checkMarkColor}}" wx:if="{{val && styleType==1}}"></view>
+  <view class="fui-check__mark-circle {{dotColor=='' || dotColor===true?'fui-radio__active-bgcolor':''}}" style="background:{{dotColor}}" wx:if="{{val && styleType==2}}">
+  </view>
   <radio class="fui-radio__hidden" color="{{color}}" disabled="{{disabled}}" value="{{value}}" checked="{{val}}"></radio>
 </view>
 
 <wxs module="parse">
   module.exports = {
-    getBackgroundColor: function (val, isCheckMark, color) {
-      var _color = val ? color : '#fff'
-      if (isCheckMark) {
+    getBackgroundColor: function (val, isCheckMark, color, styleType) {
+      var _color = val && styleType == 1 ? color : '#fff'
+      if (isCheckMark && styleType == 1) {
         _color = 'transparent'
       }
       return _color;
     },
-    getBorderColor: function (val, isCheckMark, color, borderColor) {
+    getBorderColor: function (val, isCheckMark, color, borderColor, styleType) {
       var _color = val ? color : borderColor;
-      if (isCheckMark) {
+      if (isCheckMark && styleType == 1) {
         _color = 'transparent'
       }
       return _color;

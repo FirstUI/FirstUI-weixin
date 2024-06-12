@@ -1,7 +1,7 @@
 import fui from './common/fui-app.js'
 import fuiConfig from './components/firstui/fui-config/index'
 wx.fui = fui
-wx.$fui = fuiConfig
+wx.$fui = fuiConfig 
 App({
   onLaunch() {
     if (wx.canIUse('getUpdateManager')) {
@@ -22,6 +22,6 @@ App({
     }
   },
   globalData: {
-    version: "2.3.0"
+    version: "2.4.0"
   }
 })

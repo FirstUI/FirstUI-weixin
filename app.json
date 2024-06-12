@@ -88,14 +88,14 @@
         "iconPath": "static/images/tabbar/layout_default_3x.png",
         "selectedIconPath": "static/images/tabbar/layout_selected_3x.png"
       },
-      {
+      { 
         "pagePath": "pages/tabbar/template/template",
         "text": "模板",
         "iconPath": "static/images/tabbar/mod_default_3x.png",
         "selectedIconPath": "static/images/tabbar/mod_selected_3x.png"
       },
       {
-        "pagePath": "pages/tabbar/my/my",
+        "pagePath": "pages/tabbar/my/my", 
         "text": "我的",
         "iconPath": "static/images/tabbar/my_default_3x.png",
         "selectedIconPath": "static/images/tabbar/my_selected_3x.png"

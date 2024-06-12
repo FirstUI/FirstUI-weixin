@@ -13,11 +13,25 @@ Component({
         this.initData(val)
       }
     },
+    textKey: {
+      type: String,
+      value: 'text'
+    },
     //菜单按钮字体大小 rpx
     itemSize: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 32
+    },
+    //v2.4.0+
+    itemColor: {
+      type: String,
+      value: '#181818'
+    },
+    //v2.4.0+
+    itemDarkColor: {
+      type: String,
+      value: '#D1D1D1'
     },
     //提示信息
     tips: {
@@ -31,8 +45,8 @@ Component({
     },
     //提示文字大小 rpx
     size: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 26
     },
     //是否需要圆角
@@ -45,6 +59,12 @@ Component({
       type: Boolean,
       value: true
     },
+    //v2.4.0+
+    cancelSize: {
+      type: String,
+      optionalTypes: [Number],
+      value: 32
+    },
     //light/dark
     theme: {
       type: String,
@@ -56,8 +76,8 @@ Component({
       value: false
     },
     zIndex: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 1001
     }
   },
@@ -75,7 +95,7 @@ Component({
         if (typeof vals[0] !== 'object') {
           vals = vals.map(item => {
             return {
-              text: item
+              [this.data.textKey]: item
             }
           })
         }

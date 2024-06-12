@@ -1,6 +1,7 @@
 <view class="fui-switch__input" style="zoom:{{scaleRatio}}">
-  <view class="fui-switch__input-def {{val?'fui-switch__input--checked':''}} {{disabled?'fui-checkbox__disabled':''}} {{val && !color?'fui-switch__color':''}}" style="background:{{val?color:'#dfdfdf'}};border-color:{{val?color:borderColor}}" wx:if="{{type==='switch'}}">
-    <view class="fui-switch__input-after {{val?'fui-switch__input--after':''}}" style="background:{{val?(btnColor?btnColor:'#fff'):'#fff'}}">
+  <view class="fui-switch__input-def {{disabled?'fui-checkbox__disabled':''}} {{val && !color?'fui-switch__color':''}}" style="background:{{val?color:'#dfdfdf'}};border-color:{{val?color:borderColor}}" wx:if="{{type==='switch'}}">
+    <view class="fui-switch__input-before {{val?'fui-switch__input--checked':''}}" style="background:{{background}}"></view>
+    <view class="fui-switch__input-after {{val?'fui-switch__input--after':''}}" style="background:{{val?(btnColor?btnColor:btnBgColor):btnBgColor}}">
       <slot></slot>
     </view>
     <switch class="fui-switch__hidden" bindchange="change" name="{{name}}" checked="{{val}}" disabled="{{disabled}}" color="{{color}}">

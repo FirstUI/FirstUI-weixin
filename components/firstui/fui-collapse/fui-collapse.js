@@ -4,6 +4,10 @@ Component({
     accordion: {
       type: Boolean,
       value: false
+    },
+    background: {
+      type: String,
+      value: 'transparent'
     }
   },
   data: {

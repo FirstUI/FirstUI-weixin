@@ -27,15 +27,13 @@
   transition: background-color .1s, border .1s;
 }
 
-.fui-switch__input-def::before {
-  content: " ";
+.fui-switch__input-before {
   position: absolute;
   top: 0;
   left: 0;
   width: 50px;
   height: 30px;
   border-radius: 15px;
-  background-color: #fdfdfd;
   transition: transform .3s
 }
 
@@ -54,11 +52,7 @@
   justify-content: center;
 }
 
-.fui-switch__input--checked::before {
-  transform: scale(0)
-}
-
-.fui-switch__input--checked::before {
+.fui-switch__input--checked {
   transform: scale(0)
 }
 

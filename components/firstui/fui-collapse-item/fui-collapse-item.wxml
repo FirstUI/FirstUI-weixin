@@ -1,5 +1,5 @@
-<view class="fui-collapse__item">
-  <view bindtap="onClick" class="fui-collapse-item__title {{disabled?'fui-collapse__disabled':''}}" style="background:{{background}}">
+<view class="fui-collapse__item" style="margin-top: {{marginTop}}rpx;margin-bottom: {{marginBottom}}rpx;">
+  <view catchtap="onClick" class="fui-collapse-item__title {{disabled?'fui-collapse__disabled':''}}" style="background:{{background}}">
     <view class="fui-collapse__title">
       <slot></slot>
     </view>

@@ -64,6 +64,16 @@ Component({
     contentBg: {
       type: String,
       value: '#fff'
+    },
+    marginTop: {
+      type: String,
+      optionalTypes: [Number],
+      value: 0
+    },
+    marginBottom: {
+      type: String,
+      optionalTypes: [Number],
+      value: 0
     }
   },
   relations: {

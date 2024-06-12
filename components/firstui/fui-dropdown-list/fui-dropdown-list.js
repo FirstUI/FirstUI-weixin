@@ -7,14 +7,26 @@ Component({
         this.initData(val)
       }
     },
+    textKey: {
+      type: String,
+      value: 'text'
+    },
+    srcKey: {
+      type: String,
+      value: 'src'
+    },
+    checkedKey: {
+      type: String,
+      value: 'checked'
+    },
     height: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 0
     },
     width: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 0
     },
     background: {
@@ -22,8 +34,8 @@ Component({
       value: '#fff'
     },
     radius: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 0
     },
     padding: {
@@ -59,13 +71,13 @@ Component({
       value: false
     },
     iconWidth: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 48
     },
     size: {
-      type: Number,
-      optionalTypes: [String],
+      type: String,
+      optionalTypes: [Number],
       value: 32
     },
     color: {
@@ -105,17 +117,21 @@ Component({
         if (typeof vals[0] !== 'object') {
           vals = vals.map(item => {
             return {
-              text: item,
-              checked: false
+              [this.data.textKey]: item,
+              [this.data.checkedKey]: false
             }
           })
         } else {
           vals.map(item => {
-            item.checked = item.checked || false
+            item[this.data.checkedKey] = item[this.data.checkedKey] || false
           })
         }
         this.setData({
           itemList: vals
+        })
+      } else {
+        this.setData({
+          itemList: []
         })
       }
     },
@@ -125,9 +141,9 @@ Component({
       let vals = [...this.data.itemList]
       vals.forEach((item, idx) => {
         if (index === idx) {
-          item.checked = true
+          item[this.data.checkedKey] = true
         } else {
-          item.checked = false
+          item[this.data.checkedKey] = false
         }
       })
       this.setData({

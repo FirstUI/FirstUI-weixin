@@ -35,11 +35,6 @@ Component({
       type: Number,
       optionalTypes: [String],
       value: 400
-    },
-    //背景颜色，和当前页面背景色保持一致
-    backgroundColor: {
-      type: String,
-      value: '#F1F4FA'
     }
   }
 })

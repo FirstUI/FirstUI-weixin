@@ -11,6 +11,18 @@ Component({
         this.initData(vals)
       }
     },
+    nameKey: {
+      type: String,
+      value: 'name'
+    },
+    badgeKey: {
+      type: String,
+      value: 'badge'
+    },
+    disabledKey: {
+      type: String,
+      value: 'disabled'
+    },
     // 当前选项卡
     current: {
       type: Number,
@@ -149,6 +161,11 @@ Component({
       type: String,
       value: 'row'
     },
+    itemPadding: {
+      type: String,
+      optionalTypes: [Number],
+      value: 32
+    },
     zIndex: {
       type: Number,
       optionalTypes: [String],
@@ -181,7 +198,7 @@ Component({
           vals = vals.map(item => {
             const scrollId = this.getId()
             return {
-              name: item,
+              [this.data.nameKey]: item,
               fui_s_id: scrollId
             }
           })
@@ -200,13 +217,13 @@ Component({
       const item = {
         ...this.data.vals[index]
       }
-      if (this.data.tabIndex === index || item.disabled) return;
+      if (this.data.tabIndex === index || item[this.data.disabledKey]) return;
       let scrollIndex = index - 1 < 0 ? 0 : index - 1;
-      if(!this.data.vals[scrollIndex]) return;
+      if (!this.data.vals[scrollIndex]) return;
       this.setData({
         tabIndex: index,
         scrollInto: this.data.vals[scrollIndex].fui_s_id
-      },()=>{
+      }, () => {
         delete item.fui_s_id;
         this.triggerEvent('change', {
           index: index,
